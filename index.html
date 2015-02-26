@@ -1,168 +1,126 @@
 <!doctype html>
 <html>
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet'>
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
-     <link href='style.css' rel='stylesheet'>
-
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="articles container">
-      
-      <div class="article current">
-        <div class="item row">
-          <div class="col-xs-3">
-            <p class="source">FLIGHT</p>
+    <div class="header">
+      <div class="container">
+        <a href="#" class="logo-icon">
+          <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/logo.png">
+        </a>
+
+        <ul class="menu">
+          <li><a href="#">Get the App</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">Magazines</a></li>
+          <li><a href="#">Web Tools</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Careers</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">More <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Our Blog</a></li>
+              <li><a href="#">Maps Blog</a></li>
+              <li><a href="#">Eng Blog</a></li>
+              <li><a href="#">Advertisers</a></li>
+              <li><a href="#">Publishers</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slider">
+
+      <div class="slide active-slide">
+        <div class="container">
+          <div class="row">
+            <div class="slide-copy col-xs-5">
+              <h1>Flipboard Is Your Personal Magazine</h1>
+              <p>It's a single place to discover, collect and share the news you care about.  Add your favorite social networks, publications and blogs to stay connected to the topics and people closest to you.</p>
+              
+              <ul class="get-app">
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
+              </ul>
+            </div>
+            <div class="slide-img col-xs-7">
+              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/home.png" width="540px">
+            </div>
           </div>
-          <div class="col-xs-6">
-            <p class="title">Embraer adds third Legacy 500 prototype to flight test campaign</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="pubdate">Mar 23</p>
-          </div>
-        </div>
-        <div class="description row">
-          <div class="col-xs-3">&nbsp;</div>
-          <div class="col-xs-6">
-            <h1>Embraer adds third Legacy 500 prototype to flight test campaign</h1>
-            <p>The third Legacy 500 has joined Embraer's flight test programme aimed at delivering the midsize business jet in 2014. The airtcraft, serial number 003...</p>
-          </div>
-          <div class="col-xs-3">&nbsp;</div>
-        </div>
+        </div>      
       </div>
 
-      <div class="article">
-        <div class="item row">
-          <div class="col-xs-3">
-            <p class="source">AW Commercial Aviation</p>
+      <div class="slide slide-feature">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/cnn.png"></a>
+              <a href="#">Read Now</a>
+            </div>
+            
           </div>
-          <div class="col-xs-6">
-            <p class="title">CSeries Supplier Scramble</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="pubdate">Mar 22</p>
-          </div>
-        </div>
-        <div class="description row">
-          <div class="col-xs-3">&nbsp;</div>
-          <div class="col-xs-6">
-            <h1>CSeries Supplier Scramble</h1>
-            <p>Three months before the planned first flight of its CSeries, Bombardier is grappling with supplier issues crucial to meeting its production cost...</p>
-          </div>
-          <div class="col-xs-3">&nbsp;</div>
-        </div>
-      </div>
+        </div>      
+      </div> 
 
-      <div class="article">
-        <div class="item row">
-          <div class="col-xs-3">
-            <p class="source">AW business aviation</p>
+      <div class="slide">
+        <div class="container">
+          <div class="row">
+            <div class="slide-copy col-xs-5">
+              <h1>Enjoy Flipboard Magazines</h1>
+              <h2>on the Web</h2>
+              <p>Millions of people use Flipboard to read and collect the news they care about, curating their favorite stories into their own magazines on any topic imaginable. Now magazines created by our readers, from Dali to End Trafficking, can be shared and enjoyed on the Web by anyone, anywhere.</p>
+              
+            </div>
+            <div class="slide-img col-xs-7">
+              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/magazines.png">
+            </div>
           </div>
-          <div class="col-xs-6">
-            <p class="title">Flying the Gulfstream G650</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="pubdate">Mar 22</p>
-          </div>
-        </div>
-        <div class="description row">
-          <div class="col-xs-3">&nbsp;</div>
-          <div class="col-xs-6">
-            <h1>Flying the Gulfstream G650</h1>
-            <p>Gulfstream is turning up the heat in the large-cabin business aircraft competition with its new G650 flagship, the largest, fastest, farthest-ranging...</p>
-          </div>
-          <div class="col-xs-3">&nbsp;</div>
-        </div>
-      </div>
+        </div>      
+      </div> 
 
-      <div class="article">
-        <div class="item row">
-          <div class="col-xs-3">
-            <p class="source">FLIGHT</p>
-          </div>
-          <div class="col-xs-6">
-            <p class="title">New retirements cut RAF VC10 fleet to four</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="pubdate">Mar 22</p>
-          </div>
-        </div>
-        <div class="description row">
-          <div class="col-xs-3">&nbsp;</div>
-          <div class="col-xs-6">
-            <h1>New retirements cut RAF VC10 fleet to four</h1>
-            <p>The UK Royal Air Force has retired another two of its Vickers VC10 tankers, with the pair's departure reducing its inventory of the Rolls-Royce...</p>
-          </div>
-          <div class="col-xs-3">&nbsp;</div>
-        </div>
-      </div>
 
-      <div class="article">
-        <div class="item row">
-          <div class="col-xs-3">
-            <p class="source">FLIGHT</p>
+      <div class="slide">
+        <div class="container">
+          <div class="row">
+            <div class="slide-copy col-xs-5">
+              <h1>Badges & Widgets</h1>
+              <p>Millions of people use Flipboard to read and collect the news they care about, curating their favorite stories into their own magazines. Now you can promote the ones you create or think are awesome.</p>
+              
+              <ul class="get-app">
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
+              </ul>
+            </div>
+            <div class="slide-img col-xs-7">
+              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/bw.png" width="540px">
+            </div>
           </div>
-          <div class="col-xs-6">
-            <p class="title">Virgin can deliver more value for Delta than for SIA: Bastian</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="pubdate">Jul 17</p>
-          </div>
-        </div>
-        <div class="description row">
-          <div class="col-xs-3">&nbsp;</div>
-          <div class="col-xs-6">
-            <h1>Virgin can deliver more value for Delta than for SIA: Bastian</h1>
-            <p>Delta Air Lines president Ed Bastian is confident that the carrier can extract far more value from its shareholding in Virgin Atlantic compared with...</p>
-          </div>
-          <div class="col-xs-3">&nbsp;</div>
-        </div>
-      </div>
-
-      <div class="article">
-        <div class="item row">
-          <div class="col-xs-3">
-            <p class="source">AW Defense</p>
-          </div>
-          <div class="col-xs-6">
-            <p class="title">Freedom Experiences Two More Power Outages</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="pubdate">Mar 22</p>
-          </div>
-        </div>
-        <div class="description row">
-          <div class="col-xs-3">&nbsp;</div>
-          <div class="col-xs-6">
-            <h1>Freedom Experiences Two More Power Outages</h1>
-            <p>The Littoral Combat Ship (LCS-1) USS Freedom’s first overseas deployment to Southeast Asia has been marred by two more power outages...</p>
-          </div>
-          <div class="col-xs-3">&nbsp;</div>
-        </div>
-      </div>
-
-      <div class="article">
-        <div class="item row">
-          <div class="col-xs-3">
-            <p class="source">FLIGHT</p>
-          </div>
-          <div class="col-xs-6">
-            <p class="title">FedEx to acquire up to 30 United 757s</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="pubdate">Mar 22</p>
-          </div>
-        </div>
-        <div class="description row">
-          <div class="col-xs-3">&nbsp;</div>
-          <div class="col-xs-6">
-            <h1>FedEx to acquire up to 30 United 757s</h1>
-            <p>United Airlines is to sell up to 30 Boeing 757s to freight operator FedEx Express, with deliveries of the twinjets set to start this year.</p>
-          </div>
-          <div class="col-xs-3">&nbsp;</div>
-        </div>
-      </div>
+        </div>      
+      </div> 
 
     </div>
+
+    <div class="slider-nav">
+      <a href="#" class="arrow-prev"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
+      <ul class="slider-dots">
+        <li class="dot active-dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+      </ul>
+      <a href="#" class="arrow-next"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
+    </div> 
+    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="app.js"></script>
   </body>
