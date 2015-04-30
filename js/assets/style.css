@@ -1,0 +1,109 @@
+head, body {
+
+	background-color: #D2D7D3; /* grey */
+	/*font-family: 'Montserrat', sans-serif;*/
+	/*font-family: 'Source Code Pro' ;*/
+	font-family: 'Lato', sans-serif;
+	color: #444;
+	height: 100%;
+	min-height: 100%;
+	/*-webkit-font-smoothing: antialiased;*/
+}
+
+footer {
+	position: relative;
+	display: block;
+	font-size: 10px;
+	margin: 10px;
+}
+.footer {
+	text-align: center;
+}
+#menu-bar{
+	
+	text-align: center;
+}
+#menu-bar ul{
+	border: 1px black;
+	padding: 10px 0;
+	margin: 0;
+	display: inline-block;
+	text-transform: uppercase;
+	box-shadow: 0 5px black;
+
+}
+#menu-bar li{
+	display: inline;
+	font-size: 20px;
+	padding: 10px;
+	margin: 0px;
+
+	background-clip: border-box;
+	background-color: #F7CA18;
+	
+
+}
+
+#menu-bar li a{
+	color: black;
+}
+#menu-bar a:link {
+    text-decoration: none;
+}
+
+#menu-bar a:visited {
+    text-decoration: none;
+}
+
+#menu-bar a:hover {
+    /*text-decoration: underline;*/
+    text-decoration: none;
+}
+
+#menu-bar a:active {
+    text-decoration: none;
+    /*text-decoration: underline;*/
+}
+/* ...mobile styles here... */
+@media screen and (max-width: 500px){
+	#menu-bar{
+	}
+	#menu-bar ul{
+		text-align: center;
+		padding: 0;
+		background-color: #F7CA18;
+		background-clip: border-box;
+
+	}
+	#menu-bar li{
+		display: inline-block;
+		font-size: 20px;
+
+		padding: 10px;
+		margin: 0px;
+
+	}
+
+}
+@media screen and (max-width: 414px) { /* ...tablet styles here... */ 
+
+}
+@media screen and (min-width: 415px) and (max-width: 800px){ /* ...desktop styles here... */ 
+	#menu-bar{
+	}
+	#menu-bar ul{
+		text-align: center;
+		padding: 0;
+		background-color: #F7CA18;
+		background-clip: border-box;
+
+	}
+	#menu-bar li{
+		display: inline-block;
+		font-size: 20px;
+
+		padding: 10px;
+		margin: 0px;
+
+	}	
+}
