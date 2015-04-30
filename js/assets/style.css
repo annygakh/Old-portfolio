@@ -10,6 +10,14 @@ head, body {
 	/*-webkit-font-smoothing: antialiased;*/
 }
 
+
+main {
+	text-align: center;	
+}
+.intro {
+	font-family: 'Armata', sans-serif;
+}
+
 footer {
 	position: relative;
 	display: block;
@@ -41,7 +49,14 @@ footer {
 	background-clip: border-box;
 	background-color: #F7CA18;
 	
+	
 
+}
+
+#menu-bar li:hover{
+	-webkit-animation: 	pop_out 250ms ease-in 1 normal forwards;
+	-moz-animation: 	pop_out 250ms ease-in 1 normal forwards;
+	animation: 			pop_out 250ms ease-in 1 normal forwards;
 }
 
 #menu-bar li a{
@@ -58,6 +73,7 @@ footer {
 #menu-bar a:hover {
     /*text-decoration: underline;*/
     text-decoration: none;
+
 }
 
 #menu-bar a:active {
@@ -90,6 +106,7 @@ footer {
 }
 @media screen and (min-width: 415px) and (max-width: 800px){ /* ...desktop styles here... */ 
 	#menu-bar{
+
 	}
 	#menu-bar ul{
 		text-align: center;
@@ -107,3 +124,27 @@ footer {
 
 	}	
 }
+/* animations */
+@-moz-keyframes pop_out{
+	from {
+		background-color: #F4D03F;
+	} to {
+		background-color: #E2B13C;
+	}
+}
+@-webkit-keyframes pop_out{
+	from {
+		background-color: #F4D03F;
+	} to {
+		background-color: #E2B13C;
+	}
+}
+@keyframes pop_out{
+	from {
+		background-color: #F4D03F;
+	} to {
+		background-color: #E2B13C;
+	}
+}
+
+
