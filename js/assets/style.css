@@ -16,6 +16,9 @@ main {
 }
 .intro {
 	font-family: 'Armata', sans-serif;
+	display: inline-block;
+	/*margin: 20px 20px 10px 20px;*/
+	padding: 0 20px;
 }
 
 footer {
@@ -48,31 +51,46 @@ footer {
 
 	background-clip: border-box;
 	background-color: #F7CA18;
+
+	-webkit-filter: brightness(1);
+	-moz-filter: 	brightness(1);
+		filter: 	brightness(1);
+
 	
 	
 
 }
-
+#menu-list > li:hover:not(.active) {
+    /* selects all <p> children of #parent that are not .green_guys */
+	-webkit-animation: 	hovered 250ms ease-in 1 normal forwards;
+	-moz-animation: 	hovered 250ms ease-in 1 normal forwards;
+	animation: 			hovered 250ms ease-in 1 normal forwards;
+}
 #menu-bar li:hover{
 	-webkit-animation: 	pop_out 250ms ease-in 1 normal forwards;
 	-moz-animation: 	pop_out 250ms ease-in 1 normal forwards;
 	animation: 			pop_out 250ms ease-in 1 normal forwards;
 }
+#menu-bar li.active{
+	/*background-color: #d35400; */
+	background-color: #C99E35; 
+}
 
 #menu-bar li a{
 	color: black;
+	transition: 1s;
+    text-decoration: none;
 }
 #menu-bar a:link {
-    text-decoration: none;
+    /*text-decoration: none;*/
 }
 
 #menu-bar a:visited {
     text-decoration: none;
 }
 
-#menu-bar a:hover {
-    /*text-decoration: underline;*/
-    text-decoration: none;
+#menu-bar a:hover, #menu-bar a:hover:after {
+    text-decoration: underline;
 
 }
 
@@ -129,22 +147,57 @@ footer {
 	from {
 		background-color: #F4D03F;
 	} to {
-		background-color: #E2B13C;
+		/*background-color: #E2B13C;*/
+		/*background-color: #d35400;*/
+		background-color: #C99E35;
+		
 	}
 }
 @-webkit-keyframes pop_out{
 	from {
 		background-color: #F4D03F;
 	} to {
-		background-color: #E2B13C;
+		/*background-color: #E2B13C;*/
+		/*background-color: #d35400;*/
+		background-color: #C99E35;
 	}
 }
 @keyframes pop_out{
 	from {
 		background-color: #F4D03F;
 	} to {
+		/*background-color: #E2B13C;*/
+		/*background-color: #d35400;*/
+		background-color: #C99E35;
+	}
+}
+/* --------- selected ------------ */
+@-moz-keyframes hovered{
+	from {
+		background-color: #F4D03F;
+	} to {
 		background-color: #E2B13C;
+		/*background-color: #d35400;*/
+	}
+}
+@-webkit-keyframes hovered{
+	from {
+		background-color: #F4D03F;
+	} to {
+		background-color: #E2B13C;
+		/*background-color: #d35400;*/
+	}
+}
+@keyframes hovered{
+	from {
+		background-color: #F4D03F;
+	} to {
+		background-color: #E2B13C;
+		/*background-color: #d35400;*/
 	}
 }
 
+@-webkit-keyframes darken { from {-webkit-filter: brightness(1);} to {-webkit-filter: brightness(0.3); } }
+@-moz-keyframes darken { from {-moz-filter: brightness(1);} to {-moz-filter: brightness(0.3); } }
+@keyframes darken { from {filter: brightness(1);} to {filter: brightness(0.3); } }
 
