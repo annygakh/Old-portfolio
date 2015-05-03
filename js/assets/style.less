@@ -1,6 +1,13 @@
+@bg-color: #D2D7D3;
+@navbar-color: #F7CA18;
+@navbar-active-color: #C99E35;
+@navbar-hover-color: #E2B13C;
+@figcaption-text-color: #B7BF18;
+@figcaption-bg-color: #2c3f52;
+
 head, body {
 
-	background-color: #D2D7D3; /* grey */
+	background-color: @bg-color; /* grey */
 	/*font-family: 'Montserrat', sans-serif;*/
 	/*font-family: 'Source Code Pro' ;*/
 	font-family: 'Lato', sans-serif;
@@ -32,6 +39,7 @@ footer {
 .footer {
 	text-align: center;
 }
+/*  ----------------- MENUBAR ----------------- */
 #menu-bar{
 	
 	text-align: center;
@@ -52,7 +60,7 @@ footer {
 	margin: 0px;
 
 	background-clip: border-box;
-	background-color: #F7CA18;
+	background-color: @navbar-color;
 
 	-webkit-filter: brightness(1);
 	-moz-filter: 	brightness(1);
@@ -74,7 +82,7 @@ footer {
 }
 #menu-bar li.active{
 	/*background-color: #d35400; */
-	background-color: #C99E35; 
+	background-color: @navbar-active-color; 
 }
 
 #menu-bar li a{
@@ -100,79 +108,16 @@ footer {
     /*text-decoration: underline;*/
 }
 
+/*  ----------------- RANDOM ----------------- */
 /* showcase style */
 *, *:after, *:before {
 -webkit-box-sizing: border-box;
  -moz-box-sizing: border-box; 
  box-sizing: border-box; 
 }
-.grid {
-	padding: 20px 20px 100px 20px;
-	max-width: 1300px;
-	margin: 0 auto;
-	list-style: none;
-	text-align: center;
-}
+/*  ----------------- PROJECTS DISPLAY ----------------- */
 
-.grid li {
-	display: inline-block;
-	width: 440px;
-	margin: 0;
-	padding: 20px;
-	text-align: left;
-	position: relative;
-}
-
-.grid figure {
-	margin: 0;
-	position: relative;
-}
-
-.grid figure img {
-	max-width: 100%;
-	display: block;
-	position: relative;
-}
-
-.grid figcaption {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 5px;
-	background: #2c3f52;
-}
-.grid figcaption, .grid figcaption a{
-	
-	color: #B7BF18;
-}
-/*.grid figcaption a {}*/
-
-.grid figcaption > * {
-	display: block;
-}
-
-
-.grid figcaption .name:before{
-	content: 'Name: ';
-
-}
-.grid figcaption .concept:before{
-	content: 'Concept: ';
-}
-.grid figcaption .toolkit:before {
-	content: 'Toolkit: ';
-}
-.grid figcaption .link:before {
-	content: 'Take a look: ';
-}
-
-.grid figcaption .name:before,
-.grid figcaption .concept:before,
-.grid figcaption .toolkit:before,
-.grid figcaption .link{
-	color: #F7CA18;
-}
-/* selection tricks */
+/* ------------------ SELECTION TRICKS -----------------  */
 ::-moz-selection { /* Code for Firefox */
     color: green;
     background: black;
@@ -197,7 +142,7 @@ footer {
 	#menu-bar ul{
 		text-align: center;
 		padding: 0;
-		background-color: #F7CA18;
+		background-color: @navbar-color;
 		background-clip: border-box;
 
 	}
@@ -221,7 +166,7 @@ footer {
 	#menu-bar ul{
 		text-align: center;
 		padding: 0;
-		background-color: #F7CA18;
+		background-color: @navbar-color;
 		background-clip: border-box;
 
 	}
@@ -241,7 +186,7 @@ footer {
 	} to {
 		/*background-color: #E2B13C;*/
 		/*background-color: #d35400;*/
-		background-color: #C99E35;
+		background-color: @navbar-active-color;
 		
 	}
 }
@@ -251,7 +196,7 @@ footer {
 	} to {
 		/*background-color: #E2B13C;*/
 		/*background-color: #d35400;*/
-		background-color: #C99E35;
+		background-color: @navbar-active-color;
 	}
 }
 @keyframes pop_out{
@@ -260,31 +205,31 @@ footer {
 	} to {
 		/*background-color: #E2B13C;*/
 		/*background-color: #d35400;*/
-		background-color: #C99E35;
+		background-color: @navbar-active-color;
 	}
 }
 /* --------- selected ------------ */
 @-moz-keyframes hovered{
 	from {
-		background-color: #F4D03F;
+		background-color: @navbar-color;
 	} to {
-		background-color: #E2B13C;
+		background-color: @navbar-hover-color;
 		/*background-color: #d35400;*/
 	}
 }
 @-webkit-keyframes hovered{
 	from {
-		background-color: #F4D03F;
+		background-color: @navbar-color;
 	} to {
-		background-color: #E2B13C;
+		background-color: @navbar-hover-color;
 		/*background-color: #d35400;*/
 	}
 }
 @keyframes hovered{
 	from {
-		background-color: #F4D03F;
+		background-color: @navbar-color;
 	} to {
-		background-color: #E2B13C;
+		background-color: @navbar-hover-color;
 		/*background-color: #d35400;*/
 	}
 }
