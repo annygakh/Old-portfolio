@@ -56,36 +56,12 @@ head, body{
 	overflow-x: hidden;
 	color: @accent;
 }
-body {
-	-webkit-animation: 	fade_in 3s ease-out 1 forwards ;
-	-o-animation: 		fade_in 3s ease-out 1 forwards ;
-	animation: 			fade_in 3s ease-out 1 forwards ;
+body{
+	-webkit-animation: 	fade_in 1s ease-out forwards;
+	-o-animation: 		fade_in 1s ease-out forwards;
+	animation: 			fade_in 1s ease-out forwards;
 }
-@-webkit-keyframes fade_in {
-	from { 
-		-webkit-filter:opacity(0);
-	}
-	to { 
 
-		-webkit-filter:opacity(1);
-	 }
-}
-@-o-keyframes fade_in {
-	from {  }
-	to {  }
-}
-@-moz-keyframes fade_in {
-	from {  }
-	to {  }
-}
-@keyframes fade_in {
-	from { 
-		filter:opacity(0);	
-	 }
-	to { 
-		filter:opacity(1);
-	 }
-}
 /* RECENT PROJECT */
 @blur: 5px;
 @pic-width: 500px;
@@ -159,7 +135,7 @@ body {
 	max-width: @pic-width ;
 	position: absolute;
 	text-align: left;
-	font-weight: 300;
+	/*font-weight: 300;*/
 	color:  @text-color;
 	padding: 30px;
 	z-index: 5;
@@ -214,7 +190,7 @@ header {
 .text {
 	color: @desc-color;
 
-	font-weight: 100;
+	font-weight: 300;
 	z-index: 3;
 	white-space: nowrap;
 	text-align: center;
@@ -278,6 +254,9 @@ header .text {
 	font-size: @menu-font-size;
 	padding-right: 100px;
 	padding: 5px;
+	-webkit-animation: swing_in 1s ease-out 1 forwards;
+	-o-animation: swing_in 1s ease-out 1 forwards;
+	animation: swing_in 1s ease-out 1 forwards;
 }
 #menu-list a:hover{
 	color: @hover-color;

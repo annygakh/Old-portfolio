@@ -7,7 +7,9 @@ var main = function() {
   $('.carousel').hover(function(){
   	$('.caption').fadeToggle(500);
   	$('.panes .active img').toggleClass('blurred-image');
+
   });
+
 
   app.initialize_rotating_words();
 
