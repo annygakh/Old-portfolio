@@ -11,12 +11,13 @@
 
 @margin-logo-pic: 16px;
 @margin-pic-menu: @margin-logo-pic - 10;
-@margin-rproject-menu: 70px;
+@margin-rproject-menu: 190px;
 @margin-rproject-top: 50px;
 @margin-top-header: 30px;
 
 @triangle-size: 250px;
-@menu-font-size: 50px;
+@menu-font-size: 40px;
+/*@menu-font-size: 50px;*/
 @triangle-size: @menu-font-size - 17px;
 @space-menu-triangle: 18px;
 @margin-left-all: 90px;
@@ -55,10 +56,40 @@ head, body{
 	overflow-x: hidden;
 	color: @accent;
 }
+body {
+	-webkit-animation: 	fade_in 3s ease-out 1 forwards ;
+	-o-animation: 		fade_in 3s ease-out 1 forwards ;
+	animation: 			fade_in 3s ease-out 1 forwards ;
+}
+@-webkit-keyframes fade_in {
+	from { 
+		-webkit-filter:opacity(0);
+	}
+	to { 
+
+		-webkit-filter:opacity(1);
+	 }
+}
+@-o-keyframes fade_in {
+	from {  }
+	to {  }
+}
+@-moz-keyframes fade_in {
+	from {  }
+	to {  }
+}
+@keyframes fade_in {
+	from { 
+		filter:opacity(0);	
+	 }
+	to { 
+		filter:opacity(1);
+	 }
+}
 /* RECENT PROJECT */
 @blur: 5px;
-@pic-width: 550px;
-@pic-height: 440px;
+@pic-width: 500px;
+@pic-height: 400px;
 .panes {
 	list-style-type: none;
 	position: relative;
@@ -246,6 +277,7 @@ header .text {
 	list-style-type: none;
 	font-size: @menu-font-size;
 	padding-right: 100px;
+	padding: 5px;
 }
 #menu-list a:hover{
 	color: @hover-color;

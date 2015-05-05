@@ -1,5 +1,6 @@
 /*@active-color:  #C99E35;*/
 /*@hover-color: #E2B13C;*/
+/*@menu-font-size: 50px;*/
 html,
 body,
 div,
@@ -98,16 +99,41 @@ body {
   overflow-x: hidden;
   color: #f7ca18;
 }
+body {
+  -webkit-animation: fade_in 3s ease-out 1 forwards;
+  -o-animation: fade_in 3s ease-out 1 forwards;
+  animation: fade_in 3s ease-out 1 forwards;
+}
+@-webkit-keyframes fade_in {
+  from {
+    -webkit-filter: opacity(0);
+  }
+  to {
+    -webkit-filter: opacity(1);
+  }
+}
+@-o-keyframes fade_in {
+}
+@-moz-keyframes fade_in {
+}
+@keyframes fade_in {
+  from {
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
 /* RECENT PROJECT */
 .panes {
   list-style-type: none;
   position: relative;
 }
 .panes img {
-  max-width: 550px;
-  max-height: 440px;
-  height: 440px;
-  width: 550px;
+  max-width: 500px;
+  max-height: 400px;
+  height: 400px;
+  width: 500px;
   margin: -5px 0 0 -5px;
   position: absolute;
   top: 0;
@@ -128,21 +154,21 @@ body {
   position: relative;
   /*max-width: @pic-width;*/
   /*max-height: @pic-height;*/
-  height: 440px;
-  width: 550px;
+  height: 400px;
+  width: 500px;
   overflow: hidden;
   margin: 10px 0;
   /*added*/
 }
 .recent-project {
-  margin-left: 70px;
+  margin-left: 190px;
   padding-top: 50px;
   text-align: center;
   color: #f7ca18;
 }
 .recent-project .title {
   display: block;
-  font-size: 50px;
+  font-size: 40px;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -163,7 +189,7 @@ body {
   color: #907818;
 }
 .caption {
-  max-width: 550px;
+  max-width: 500px;
   position: absolute;
   text-align: left;
   font-weight: 300;
@@ -264,16 +290,17 @@ header .text {
 }
 #menu-list li {
   list-style-type: none;
-  font-size: 50px;
+  font-size: 40px;
   padding-right: 100px;
+  padding: 5px;
 }
 #menu-list a:hover {
   color: #907818;
 }
 #menu-list a:hover:after {
   content: '';
-  width: 33px;
-  height: 33px;
+  width: 23px;
+  height: 23px;
   margin-left: 18px;
   padding-bottom: 0;
   margin-top: 15px;
@@ -285,7 +312,7 @@ header .text {
   display: inline;
   position: absolute;
   background-image: url("../../images/triangle.png");
-  background-size: 33px 33px;
+  background-size: 23px 23px;
   background-repeat: no-repeat;
 }
 /* FOOTER */
