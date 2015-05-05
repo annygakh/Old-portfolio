@@ -2,53 +2,138 @@
 <html>
 <head>
 <title>Anny Gakhokidze</title>
+
+<!-- FONTS  -->
 <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,400' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
-<link rel="stylesheet/less" type="text/css" href="js/assets/project_display.less" />
-<link rel="stylesheet/less" type="text/css" href="js/assets/style.less" />
 <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
-<!-- <link rel="stylesheet" href="js/assets/style.css"> -->
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+
+<!-- ICONS -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/evil-icons/1.7.2/evil-icons.min.css"> -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/evil-icons/1.7.2/evil-icons.min.js"></script> -->
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet/less" type="text/css" href="js/assets/project_display.less" />
+<link rel="stylesheet/css" type="text/css" href="js/assets/reset.css" />
+<link rel="stylesheet/less" type="text/css" href="js/assets/style.less" />
+<link rel="stylesheet/less" type="text/css" href="js/assets/menu.less" />
+
+<!-- LIBRARIES -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 <script src="js/lib/less.min.js" data-poll="1000" data-relative-urls="false"></script>
+
 <link data-dump-line-numbers="all" data-global-vars='{ myvar: "#ddffee", mystr: "\"quoted\"" }' rel="stylesheet/less" type="text/css" href="js/assets/style.less">
+
 <link data-dump-line-numbers="all" data-global-vars='{ myvar: "#ddffee", mystr: "\"quoted\"" }' rel="stylesheet/less" type="text/css" href="js/assets/project_display.less">
+
+<link data-dump-line-numbers="all" data-global-vars='{ myvar: "#ddffee", mystr: "\"quoted\"" }' rel="stylesheet/less" type="text/css" href="js/assets/menu.less">
 
 <script src="js/lib/less.min.js" type="text/javascript"></script>
 <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script> -->
 </head>
 
 <body>
-	<nav id="menu-bar">
-		<ul id="menu-list">
-			<li id="me"> 
-				<a href="#me">Me</a>
-			</li>
-			
-			<li id="skills"> 
-				<a href="#skills">Skills</a>
-			</li>
-			
-			<li id="experience"> 
-				<a href="#experience">Work & Education</a>
-			</li>
-
-			<li id="projects"> 
-				<a href="#projects">Projects</a>
-			</li>
-
-			<li id="photography"> 
-				<a href="#photography">Photography</a>
-			</li>
-			
-			<li id="contact"> 
-				<a href="#contact-me">Contact me</a>
-			</li>
+	<header>
+		<span id="logoname">Anny Gakhokidze</span>
+		<span class="cd-words-wrapper">
+			<span class="text ">2nd year Computer Science student</span>
+			<span class="text is-visible">software developer</span>
+			<span class="text">photographer</span>
+		</span>
+	</header>
+	<div class="top-middle">
+		<div class="sidebar">
+			<div class="container">
+				<img class="pic" src="images/me.png">
 				
-		</ul>
-	</nav>
+				
+			</div>
+			<nav id="menu-nav">
+			<ul id="menu-list" style="margin:0">
+				<li id="main" class="active"> 
+					<a href="#">Main</a>
+				</li>
+				<li id="about">
+					<a href="#">About me</a>
+				</li>
+				
+				<li id="skills"> 
+					<a href="#">Skills</a>
+				</li>
+				
+				<li id="work"> 
+					<a href="#">Work</a>
+				</li>
+
+				<li id="projects"> 
+					<a href="#">Projects</a>
+				</li>
+
+				<li id="photography"> 
+					<a href="#">Photography</a>
+				</li>
+				
+				<li id="contact"> 
+					<a href="#">Contact me</a>
+				</li>
+					
+			</ul>
+			</nav>
+		</div>
+		<div class="content">
+			<div class="recent-project">
+				<span class="title">Recent projects</span>
+				<div class="carousel active">
+					<ul class="panes">
+						<li>
+							<img src="images/projects/cafeviz3.png">
+						</li>
+						<li >
+							<img src="images/projects/cafeviz2.png">
+						</li>
+					</ul>
+				
+					<div class="caption">
+
+						<p class="name">
+							Cafeviz
+						</p>
+
+						<p class="concept">
+							Interactive heatmap of restaraunts where the weight is determined by the rating of the restaraunt. 
+						</p>
+
+						<p class="toolkit">
+							Javascript, Google Maps, Foursquare
+						</p>
+
+						<p class="links"> 
+							<a href="https://github.com/annygakh/cafeviz">Source code</a> 
+							<a href="#">detailed description</a> 
+						</p>
+
+						<p class="date">
+							April 2015
+						</p>
+					</div>
+				</div>
+				<div class="sliders">
+					<span class="prev">prev</span>
+					<span>//</span>
+					<span class="next">next</span>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+		
+
 	
 	<!-- <main>
 		<section class="me">
@@ -80,10 +165,10 @@
 		
 	</main> -->
 
-	<ul class="grid cs-style-7 projects">
+	<!-- <ul class="grid cs-style-7 projects">
 		<li>
 			<figure>
-				<img class="frame" src="images/projects/whistler5.jpg">
+				<img class="frame" src="images/projects/greensort3.png">
 				<figcaption class="frame">
 					<span class="name">Whistler App</span>
 					<span class="concept">Does mountainy thingies
@@ -135,12 +220,21 @@
 		</li>
 		
 		
-	</ul>
+	</ul> -->
 
 
-	<div class="footer">
-		<footer>All images and icons are of my own creation.</footer>
-	</div>
+	<footer>
+		<span class="social-media"> <a href="https://www.linkedin.com/pub/anny-gakhokidze/75/a17/519">linkedin</a></span>
+		<div>
+			<span class="disclaimer"> 
+			Anny Gakhokidze  2015
+			<br>
+			All images and icons are of my own creation.
+			<br>
+			Except for that photo of me. That is taken by Justin Lee.</span>
+		</div>
+		<span class="social-media"> <a href="https://github.com/annygakh">Github</a></span>
+	</footer>
 	<script src="js/clicker_callback.js"></script>
 	<script src="js/extra.js"></script>
 

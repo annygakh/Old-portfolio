@@ -1,0 +1,243 @@
+@bg-color: #D2D7D3;
+@navbar-color: #F7CA18;
+@navbar-active-color: #C99E35;
+@navbar-hover-color: #E2B13C;
+@figcaption-text-color: #B7BF18;
+@figcaption-bg-color: #2c3f52;
+
+@accent: #F7CA18;
+@bg-color: #020511;
+
+head, body {
+
+	background-color: @bg-color; /* grey */
+	/*font-family: 'Montserrat', sans-serif;*/
+	/*font-family: 'Source Code Pro' ;*/
+	font-family: 'Lato', sans-serif;
+	color: #444;
+	height: 100%;
+	min-height: 100%;
+	/*-webkit-font-smoothing: antialiased;*/
+}
+
+.hidden {
+	display: none;
+}
+main {
+	text-align: center;	
+}
+.intro {
+	font-family: 'Armata', sans-serif;
+	display: inline-block;
+	/*margin: 20px 20px 10px 20px;*/
+	padding: 0 20px;
+}
+
+footer {
+	position: relative;
+	display: block;
+	font-size: 10px;
+	margin: 10px;
+}
+.footer {
+	text-align: center;
+}
+/*  ----------------- MENUBAR ----------------- */
+#menu-bar{
+	
+	text-align: center;
+}
+#menu-bar ul{
+	border: 1px black;
+	padding: 10px 0;
+	margin: 0;
+	display: inline-block;
+	text-transform: uppercase;
+	box-shadow: 0 5px black;
+
+}
+#menu-bar li{
+	display: inline;
+	font-size: 20px;
+	padding: 10px;
+	margin: 0px;
+
+	background-clip: border-box;
+	background-color: @navbar-color;
+
+	-webkit-filter: brightness(1);
+	-moz-filter: 	brightness(1);
+		filter: 	brightness(1);
+
+	
+	
+
+}
+#menu-list > li:hover:not(.active) {
+	-webkit-animation: 	hovered 250ms ease-in 1 normal forwards;
+	-moz-animation: 	hovered 250ms ease-in 1 normal forwards;
+	animation: 			hovered 250ms ease-in 1 normal forwards;
+}
+#menu-bar li:hover{
+	-webkit-animation: 	pop_out 250ms ease-in 1 normal forwards;
+	-moz-animation: 	pop_out 250ms ease-in 1 normal forwards;
+	animation: 			pop_out 250ms ease-in 1 normal forwards;
+}
+#menu-bar li.active{
+	/*background-color: #d35400; */
+	background-color: @navbar-active-color; 
+}
+
+#menu-bar li a{
+	color: black;
+	transition: 1s;
+    text-decoration: none;
+}
+#menu-bar a:link {
+    /*text-decoration: none;*/
+}
+
+#menu-bar a:visited {
+    text-decoration: none;
+}
+
+#menu-bar a:hover, #menu-bar a:hover:after {
+    text-decoration: underline;
+
+}
+
+#menu-bar a:active {
+    text-decoration: none;
+    /*text-decoration: underline;*/
+}
+
+/*  ----------------- RANDOM ----------------- */
+/* showcase style */
+*, *:after, *:before {
+-webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box; 
+ box-sizing: border-box; 
+}
+/*  ----------------- PROJECTS DISPLAY ----------------- */
+
+/* ------------------ SELECTION TRICKS -----------------  */
+::-moz-selection { /* Code for Firefox */
+    color: green;
+    background: black;
+}
+
+::selection {
+    color: green; 
+    background: black;
+}
+
+/* ...mobile styles here... */
+@media screen and (max-width: 500px){
+	.grid {
+		padding: 10px 10px 100px 10px;
+	}
+	.grid li {
+		width: 100%;
+		min-width: 300px;
+	}
+	#menu-bar{
+	}
+	#menu-bar ul{
+		text-align: center;
+		padding: 0;
+		background-color: @navbar-color;
+		background-clip: border-box;
+
+	}
+	#menu-bar li{
+		display: inline-block;
+		font-size: 20px;
+
+		padding: 10px;
+		margin: 0px;
+
+	}
+
+}
+@media screen and (max-width: 414px) { /* ...tablet styles here... */ 
+
+}
+@media screen and (min-width: 415px) and (max-width: 800px){ /* ...desktop styles here... */ 
+	#menu-bar{
+
+	}
+	#menu-bar ul{
+		text-align: center;
+		padding: 0;
+		background-color: @navbar-color;
+		background-clip: border-box;
+
+	}
+	#menu-bar li{
+		display: inline-block;
+		font-size: 20px;
+
+		padding: 10px;
+		margin: 0px;
+
+	}	
+}
+/* animations */
+@-moz-keyframes pop_out{
+	from {
+		background-color: #F4D03F;
+	} to {
+		/*background-color: #E2B13C;*/
+		/*background-color: #d35400;*/
+		background-color: @navbar-active-color;
+		
+	}
+}
+@-webkit-keyframes pop_out{
+	from {
+		background-color: #F4D03F;
+	} to {
+		/*background-color: #E2B13C;*/
+		/*background-color: #d35400;*/
+		background-color: @navbar-active-color;
+	}
+}
+@keyframes pop_out{
+	from {
+		background-color: #F4D03F;
+	} to {
+		/*background-color: #E2B13C;*/
+		/*background-color: #d35400;*/
+		background-color: @navbar-active-color;
+	}
+}
+/* --------- selected ------------ */
+@-moz-keyframes hovered{
+	from {
+		background-color: @navbar-color;
+	} to {
+		background-color: @navbar-hover-color;
+		/*background-color: #d35400;*/
+	}
+}
+@-webkit-keyframes hovered{
+	from {
+		background-color: @navbar-color;
+	} to {
+		background-color: @navbar-hover-color;
+		/*background-color: #d35400;*/
+	}
+}
+@keyframes hovered{
+	from {
+		background-color: @navbar-color;
+	} to {
+		background-color: @navbar-hover-color;
+		/*background-color: #d35400;*/
+	}
+}
+
+@-webkit-keyframes darken { from {-webkit-filter: brightness(1);} to {-webkit-filter: brightness(0.3); } }
+@-moz-keyframes darken { from {-moz-filter: brightness(1);} to {-moz-filter: brightness(0.3); } }
+@keyframes darken { from {filter: brightness(1);} to {filter: brightness(0.3); } }
+

@@ -8,6 +8,10 @@
 @border-radius: 10px;
 
 /* YELLOW SHADES */
+@accent: #F7CA18;
+@bg-color: #020511;
+
+@jap: #E2B13C;
 @cream: #F5D76E;
 @saffron: #F4D03F;
 @amur: #F3C13A;
@@ -37,23 +41,6 @@
 	-webkit-perspective: 	400px;
 	perspective: 			400px;
 }
-.grid li:before{
-
-	-webkit-transition: 2s all ease-in;
-	transition: 2s all ease-in;
-}
-.grid li:hover:before{
-	content: '' ;
-	background-color: @saffron;
-	width: 	2%;
-	height: 40%;
-
-	top: 	15%;
-	left: 	0%;
-	z-index: -1;
-
-	position: absolute;
-}
 
 .grid figure {
 	margin: 0;
@@ -65,13 +52,30 @@
 	border-bottom: 	8px solid black;
 	border-left: 	8px solid @navbar-color;
 }
-
+.grid figure:before{
+	content: '' ;
+	width: 0;
+	height: 0;
+	border-left: 5px solid purple;
+	border-right:: 5px solid purple;
+	border-right:: 5px solid black;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 
 
 .grid figure img {
 	max-width: 100%;
+
+	/*max-height: 100%;*/
 	display: block;
 	position: relative;
+	-webkit-filter: grayscale(100%);
+	filter: 		grayscale(100%);
+
+
+	
 
 }
 
@@ -118,8 +122,8 @@
 }
 
 .grid figure:hover img {
-	-webkit-filter: blur(6px);
-	filter: 		blur(6px);
+	-webkit-filter: blur(6px) grayscale(100%);
+	filter: 		blur(6px) grayscale(100%);
 
 }
 figure:hover figcaption{
