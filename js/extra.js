@@ -19,76 +19,7 @@ app.remove_all_active_classes = function(){
 	}
 }
 
-app.initialize_carousel = function() {
-	var $slider = $('.panes'); 
-	var $slide = 'li';
-	var $transition_time = 1000; 
-	var $time_between_slides = 4000; // 4 seconds
 
-	function slides(){
-	  return $slider.find($slide);
-	}
-
-	$slides = slides();
-	$slides_first = $slides.first();
-
-	$slides.fadeOut();
-	$slides_first.addClass('active');
-	$slides_first.fadeIn($transition_time);
-
-	$interval = setInterval(switch_to_next_carousel, $transition_time +  $time_between_slides 
-	);
-	function is_hovered(){
-		var is_hovered = $(".recent-project").find(".carousel:hover").length;
-		return is_hovered;
-		
-	}
-	function switch_to_next_carousel() {
-		if (!is_hovered()){
-
-			var curr_index = get_current_index();
-
-		 	fade_out(curr_index);
-
-		 	if (slides().length == curr_index + 1) 
-		 		curr_index = -1; // loop to start
-
-		 	var next_index = curr_index + 1;
-
-		 	fade_in(next_index);	
-		}
-	}
-	function get_current_index(){
-		var curr_index = $slider.find($slide + '.active').index();
-		return curr_index;
-	}
-	function fade_out(i){
-		slides().eq(i).removeClass('active');
-		slides().eq(i).fadeOut($transition_time);
-
-	}
-	function fade_in(i){
-		slides().eq(i).fadeIn($transition_time);
-	 	slides().eq(i).addClass('active');
-	}
-	function switch_to_prev_carousel(){
-		if (!is_hovered()){
-
-			var curr_index = $slider.find($slide + '.active').index();
-			fade_out(curr_index);
-			if (curr_index == 0)
-			curr_index = slides().length - 1;
-			var next_index = curr_index - 1;
-			fade_in(next_index);
-		}
-	}
-
-	$('.prev').on('click', switch_to_prev_carousel);
-	$('.next').on('click', switch_to_next_carousel);
-
-app.initialize_carousels = function() {
-	
-}
 app.initialize_rotating_words = function(){
 	var $span_wrapper = $('.cd-words-wrapper');
   	var span = 'span';
@@ -130,13 +61,6 @@ app.initialize_rotating_words = function(){
 		spans().eq(i).fadeIn(transition_time);
 	 	spans().eq(i).addClass('active');
 	}
-}
-app.initialize_hover_blur_caption = function(){
-	$('.carousel').hover(function(){
-		$('.caption').fadeToggle(500);
-		$('.panes .active img').toggleClass('blurred-image');
-
-	});
 }
 
 app.render_main_page = function(){
@@ -184,4 +108,79 @@ function render_detailed_project_page(url){
 }
 
 
+
+
+function initialize_carousel(id) {
+	var $slider = $('.panes.' + id); 
+	var $slide = 'li';
+	var $transition_time = 1000; 
+	var $time_between_slides = 4000; // 4 seconds
+
+	function slides(){
+	  return $slider.find($slide);
+	}
+
+	$slides = slides();
+	$slides_first = $slides.first();
+
+	$slides.fadeOut();
+	$slides_first.addClass('active');
+	$slides_first.fadeIn($transition_time);
+
+	$interval = setInterval(switch_to_next_carousel, $transition_time +  $time_between_slides 
+	);
+	function is_hovered(){
+		var is_hovered = $(".summary." + id).find(".carousel:hover").length;
+		return is_hovered;
+		
+	}
+	function switch_to_next_carousel() {
+		if (!is_hovered()){
+
+			var curr_index = get_current_index();
+
+		 	fade_out(curr_index);
+
+		 	if (slides().length == curr_index + 1) 
+		 		curr_index = -1; // loop to start
+
+		 	var next_index = curr_index + 1;
+
+		 	fade_in(next_index);	
+		}
+	}
+	function get_current_index(){
+		var curr_index = $slider.find($slide + '.active').index();
+		return curr_index;
+	}
+	function fade_out(i){
+		slides().eq(i).removeClass('active');
+		slides().eq(i).fadeOut($transition_time);
+
+	}
+	function fade_in(i){
+		slides().eq(i).fadeIn($transition_time);
+	 	slides().eq(i).addClass('active');
+	}
+	function switch_to_prev_carousel(){
+		if (!is_hovered()){
+
+			var curr_index = $slider.find($slide + '.active').index();
+			fade_out(curr_index);
+			if (curr_index == 0)
+			curr_index = slides().length - 1;
+			var next_index = curr_index - 1;
+			fade_in(next_index);
+		}
+	}
+
+	$('.prev.' + id).on('click', switch_to_prev_carousel);
+	$('.next.' + id).on('click', switch_to_next_carousel);
+}
+function initialize_hover_blur_caption(id){
+	$('.carousel.'+id).hover(function(){
+		$('.caption.' + id).fadeToggle(500);
+		$('.panes.' + id + ' .active img').toggleClass('blurred-image');
+
+	});
 }

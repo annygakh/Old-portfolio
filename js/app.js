@@ -2,8 +2,8 @@ var app = app || {};
 var data;
 var main = function() {
   // app.initialize_click_listeners();
-  app.initialize_carousel();
-  app.initialize_hover_blur_caption();
+  initialize_carousel(0);
+  initialize_hover_blur_caption(0);
   app.initialize_rotating_words();
   var products = [];
 
@@ -31,19 +31,24 @@ var main = function() {
 
     for (var i = 0; i < data.length; i++){
       var obj = data[i];
-      // console.log(data["id"]);
+      console.log(obj);
+      var obj_short_summary = obj["short-summary"];
       var attrs = {
         "name" : obj.name,
         "id" : obj.id,
-        "concept" : obj.concept,
-        "toolkit" : obj.toolkit,
-        "link" : obj.link,
-        "date" : obj.date,
+        "concept" : obj_short_summary["concept"],
+        "toolkit" : obj_short_summary["toolkit"],
+        "link" : obj_short_summary["link"],
+        "date" : obj_short_summary["date"],
       }
+
+
+      console.log(obj["concept"]);
       list.append(template(attrs));
+      initialize_carousel(obj.id);
+      initialize_hover_blur_caption(obj.id);
 
     }
-    app.initialize_carousels();
   }
 
   $(window).on("hashchange", function(){

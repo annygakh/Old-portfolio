@@ -93,8 +93,9 @@
 		<div class="content">
 			<div class="page hidden main recent-project ">
 				<span class="title" >Recent projects</span>
-				<div class="carousel active">
-					<ul class="panes">
+				<div class="summary 0">
+				<div class="carousel active 0" id="0">
+					<ul class="panes 0">
 						<li>
 							<img src="images/projects/cafeviz3.png">
 						</li>
@@ -103,7 +104,7 @@
 						</li>
 					</ul>
 				
-					<div class="caption">
+					<div class="caption 0">
 
 						<p class="name">
 							Cafeviz
@@ -128,10 +129,14 @@
 					</div>
 				</div>
 				<div class="sliders">
-					<span class="prev">prev</span>
+					<span class="prev 0">prev</span>
 					<span>//</span>
-					<span class="next">next</span>
-				</div></div>
+					<span class="next 0">next</span>
+				</div>
+
+				
+				</div>
+				</div>
 			<div class="page hidden about">
 				About me
 			</div>
@@ -158,10 +163,10 @@
 		
 
 	<script type="text/template" id="summary-project-template">
-	<div class="summary" id="<%=id%>">
+	<div class="summary <%=id%>" id="<%=id%>">
 
-			<div class="carousel active summary">
-				<ul class="panes">
+			<div class="carousel active summary <%=id%>">
+				<ul class="panes <%=id%>">
 					<li>
 						<img src="images/projects/cafeviz3.png">
 					</li>
@@ -170,7 +175,7 @@
 					</li>
 				</ul>
 			
-				<div class="caption">
+				<div class="caption <%=id%>">
 
 					<p class="name">
 						<%=name%> 
