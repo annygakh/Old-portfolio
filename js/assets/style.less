@@ -51,7 +51,17 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 /* ------------------------------------------ GENERAL */
+.page {
+	-webkit-filter: opacity(0);
+	filter: opacity(0);
+	/*display: none;*/
 
+}
+.page.visible{
+	-webkit-filter: opacity(1);
+	filter: opacity(1);
+
+}
 head, body{
 	background-color: @bg-color;
 	
@@ -69,6 +79,9 @@ footer, header, .top-middle{
 	margin-bottom: 150px;
 }
 
+.hidden, .hidden.recent-project {
+	display: none;
+}
 /* ------------------------------------------ RECENT PROJECT */
 @blur: 5px;
 @pic-width: 	450px;
@@ -115,14 +128,14 @@ footer, header, .top-middle{
 
 .recent-project{
 	/*margin: 0 auto;*/
-	padding: 30px;
+	/*padding: 30px;*/
 	width: 90%;
 	height: 60vh;
 	/*padding-left: @margin-rproject-menu;*/
 	/*padding-left: 	60px;*/
 	/*padding-right: 	60px;*/
 	display: inline-block;
-	padding-top: @margin-rproject-top;
+	/*padding-top: @margin-rproject-top;*/
 	text-align: center;
 	color: @accent;
 }
@@ -252,8 +265,10 @@ header .text {
 	display: inline-block;
 	vertical-align: top;
 	min-width:  10%;
+	min-height:  60vmin;
 	width: 70%;
 	max-width: 50%;
+	margin-top: @margin-rproject-top;
 }
 .description, .me {
 	display: inline-block;

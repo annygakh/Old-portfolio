@@ -63,27 +63,27 @@
 					<a href="#">Main</a>
 				</li>
 				<li id="about">
-					<a  href="#">About me</a>
+					<a  href="#about">About me</a>
 				</li>
 				
 				<li id="skills"> 
-					<a  href="#">Skills</a>
+					<a  href="#skills">Skills</a>
 				</li>
 				
 				<li  id="work"> 
-					<a  href="#">Work</a>
+					<a  href="#work">Work</a>
 				</li>
 
 				<li  id="projects"> 
-					<a  href="#">Projects</a>
+					<a  href="#projects">Projects</a>
 				</li>
 
 				<li  id="photography"> 
-					<a  href="#">Photography</a>
+					<a  href="#photography">Photography</a>
 				</li>
 				
 				<li  id="contact"> 
-					<a  href="#">Contact me</a>
+					<a  href="#contact">Contact me</a>
 				</li>
 				
 					
@@ -91,7 +91,7 @@
 			</nav>
 		</div>
 		<div class="content">
-			<div class="recent-project">
+			<div class="page hidden main recent-project ">
 				<span class="title" >Recent projects</span>
 				<div class="carousel active">
 					<ul class="panes">
@@ -131,72 +131,77 @@
 					<span class="prev">prev</span>
 					<span>//</span>
 					<span class="next">next</span>
-
-				</div>
-
+				</div></div>
+			<div class="page hidden about">
+				About me
+			</div>
+			<div class="page hidden skills">
+				Skills
+			</div>
+			<div class="page hidden work">
+				Work
+			</div>
+			<div class="page hidden projects">
+				Projects
+			</div>
+			<div class="page hidden photography">
+				Photography
+			</div>
+			<div class="page hidden contact">
+				Stuff
+			</div>
+			<div class="page hidden error">
+				Oh oh. something went wrong
 			</div>
 		</div>
 	</div>
 		
 
-	<!-- <ul class="grid cs-style-7 projects">
-		<li>
-			<figure>
-				<img class="frame" src="images/projects/greensort3.png">
-				<figcaption class="frame">
-					<span class="name">Whistler App</span>
-					<span class="concept">Does mountainy thingies
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem id nihil, atque ipsum porro est alias quisquam rerum sint molestias.
-					</span>
-					<span class="toolkit">Nature</span>
-					<span class="link"><a href="https://www.flickr.com/photos/anny-gakhokidze/14155112223/">Flickr</a></span>
-					<h2></h2>
-				</figcaption>
-			</figure>
-		</li>
+	<script type="text/template" id="summary-project-template">
+	<div class="summary" id="<%=id%>">
 
-		<li>
-			<figure>
-				<img src="images/projects/whistler5.jpg">
-				<figcaption>
-					<span class="name">Whistler App</span>
-					<span class="concept">Does mountainy thingies Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident possimus velit accusantium ad ullam ea quis iste reiciendis. Fugit, non. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, minus.</span>
-					<span class="toolkit">Nature</span>
-					<span class="link"><a href="https://www.flickr.com/photos/anny-gakhokidze/14155112223/">Flickr</a></span>
-					<h2></h2>
-				</figcaption>
-			</figure>
-		</li>
+			<div class="carousel active summary">
+				<ul class="panes">
+					<li>
+						<img src="images/projects/cafeviz3.png">
+					</li>
+					<li >
+						<img src="images/projects/cafeviz2.png">
+					</li>
+				</ul>
+			
+				<div class="caption">
 
-		<li>
-			<figure>
-				<img src="images/projects/whistler5.jpg">
-				<figcaption>
-					<span class="name">Whistler App</span>
-					<span class="concept">Does mountainy thingies Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, obcaecati officiis vero ut modi accusamus placeat doloribus nisi neque asperiores.</span>
-					<span class="toolkit">Nature</span>
-					<span class="link"><a href="https://www.flickr.com/photos/anny-gakhokidze/14155112223/">Flickr</a></span>
-					<h2></h2>
-				</figcaption>
-			</figure>
-		</li>
-		<li>
-			<figure>
-				<img src="images/projects/whistler5.jpg">
-				<figcaption>
-					<span class="name">Whistler App</span>
-					<span class="concept">Does mountainy thingies Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, obcaecati officiis vero ut modi accusamus placeat doloribus nisi neque asperiores.</span>
-					<span class="toolkit">Nature</span>
-					<span class="link"><a href="https://www.flickr.com/photos/anny-gakhokidze/14155112223/">Flickr</a></span>
-					<h2></h2>
-				</figcaption>
-			</figure>
-		</li>
-		
-		
-	</ul> -->
+					<p class="name">
+						<%=name%> 
+					</p>
 
+					<p class="concept">
+						<%=concept%> 
+					</p>
 
+					<p class="toolkit">
+						<%=toolkit%> 
+					</p>
+
+					<p class="links"> 
+						<a href="<%=link%>">Source code</a> 
+						<a class="link" data-name="<%=name%>" href="#<%=name%>">detailed description</a> 
+					</p>
+
+					<p class="date">
+						<%=date%>
+					</p>
+				</div>
+
+			</div>
+			<div class="sliders">
+				<span class="prev <%=id%>">prev</span>
+				<span>//</span>
+				<span class="next <%=id%>">next</span>
+			</div>
+	</div>
+		         </script>
 	<footer>
 		<span class="social-media"> <a href="https://www.linkedin.com/pub/anny-gakhokidze/75/a17/519">linkedin</a></span>
 		<div>
@@ -214,13 +219,15 @@
 	<script src="js/clicker_callback.js"></script>
 	<script src="js/extra.js"></script>
 
+	<script src="js/lib/underscore-min.js"></script>
 	<script src="js/pages/contact.js"></script>
 	<script src="js/pages/experience.js"></script>
-	<script src="js/pages/me.js"></script>
+	<script src="js/pages/main.js"></script>
 	<script src="js/pages/photography.js"></script>
 	<script src="js/pages/projects.js"></script>
 	<script src="js/pages/skills.js"></script>
 
 	<script src="js/app.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>

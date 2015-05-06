@@ -86,6 +86,9 @@ app.initialize_carousel = function() {
 	$('.prev').on('click', switch_to_prev_carousel);
 	$('.next').on('click', switch_to_next_carousel);
 
+app.initialize_carousels = function() {
+	
+}
 app.initialize_rotating_words = function(){
 	var $span_wrapper = $('.cd-words-wrapper');
   	var span = 'span';
@@ -128,5 +131,57 @@ app.initialize_rotating_words = function(){
 	 	spans().eq(i).addClass('active');
 	}
 }
+app.initialize_hover_blur_caption = function(){
+	$('.carousel').hover(function(){
+		$('.caption').fadeToggle(500);
+		$('.panes .active img').toggleClass('blurred-image');
+
+	});
+}
+
+app.render_main_page = function(){
+	var page = $('.main');
+	app.toggle_visibility(page);
+}
+app.render_contact_page = function(){
+	var page = $('.contact');
+	app.toggle_visibility(page);
+}
+app.render_skills_page = function(){
+	var page = $('.skills');
+	app.toggle_visibility(page);
+}
+app.render_work_page = function(){
+	var page = $('.work');
+	app.toggle_visibility(page);
+}
+app.render_projects_page = function(){
+	var page = $('.projects');
+	app.toggle_visibility(page);
+}
+
+app.render_photography_page = function(){
+	var page = $('.photography');
+	app.toggle_visibility(page);
+}
+app.render_about_page = function(){
+	var page = $('.about');
+	app.toggle_visibility(page);
+}
+app.render_error_page = function(){
+	var page = $('.error');
+	app.toggle_visibility(page);
+}
+app.toggle_visibility = function(page){
+	
+	page.addClass('visible');
+	page.removeClass('hidden');
+}
+function render_detailed_project_page(url){
+	var projects = ["cafeviz", "booky"],
+	results = [];
+	// TODO
+}
+
 
 }
