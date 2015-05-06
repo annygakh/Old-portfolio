@@ -16,7 +16,7 @@ var main = function() {
       console.log("getJson");
       // get data about our products
       products = data;
-      console.log(data.length);
+      // console.log(data.length);
       generate_projects_html(data);
     });
   }
@@ -72,7 +72,11 @@ var main = function() {
 
   	var map = {
   		// the homepage
-  		"": function(){
+      "": function(){
+        //just in case 
+        render_page(0);
+      },
+  		"#": function(){
   			// show main page
   			// app.render_main_page();// todo
         render_page(0);
@@ -92,7 +96,7 @@ var main = function() {
       "#projects" : function(){
         url = url.split("#projects/");
 
-        if (url.length == 1){
+        if (url[0] == ""){
           // app.render_projects_page(data);
           render_page(4);
         } else {

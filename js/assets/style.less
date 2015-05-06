@@ -202,15 +202,19 @@ footer, header, .top-middle{
 }
 
 
-/* ------------------------------------------ CONTACT */
-
-.contact {
+/* ------------------------------------------ GENERAL ALL PAGES */
+.textpage {
 	margin-top: 30px;
 	text-align: left;
 }
-.contact.greeting{
+.textpage p, .textpage .p{
 	color: @text-color;
 }
+.page a{
+	
+	color: @text-color;
+}
+/* ------------------------------------------ CONTACT */
 .contact.info{
 	margin-top: 50px;
 	text-transform: uppercase;
@@ -241,7 +245,39 @@ footer, header, .top-middle{
 .contact.github:before{
 	content: 'GITHUB';
 }
+/* ------------------------------------------ WORK */
+.work .job-title{
+	color: @accent;
 
+}
+.construction-message{
+	font-size: 10px;
+}
+.work .announcement a{
+	color: @text-color;
+	white-space: nowrap;
+}
+.work .job-title span {
+	margin: 7px auto;
+	white-space: nowrap;
+}
+.work .job-title span:not(:last-child):after{
+	content: '//';
+	color: @text-color;
+}
+.work .job-position {
+	margin: 20px 0; 
+}
+.work .job-position .description{
+	margin-left: 50px;
+	list-style-type: none;
+
+}
+.work .job-position .description li:before{
+	content: '–';
+}
+/* ------------------------------------------ SKILLS */
+/* ------------------------------------------ PHOTOGRAPHY */
 
 /* ------------------------------------------ HEADER */
 header {
