@@ -74,42 +74,48 @@ var main = function() {
   		// the homepage
   		"": function(){
   			// show main page
-  			app.render_main_page();// todo
-  		},
-  		"#about" : function(){
-  			app.render_about_page();
-  		},  		
-  		"#skills" : function(){
-  			app.render_skills_page();
-  		},
-  		"#work" : function(){
-  			app.render_work_page();
-  		},
-  		"#projects" : function(){
-  			url = url.split("#projects/");
+  			// app.render_main_page();// todo
+        render_page(0);
+      },
+      "#about" : function(){
+        // app.render_about_page();
+        render_page(1);
+      },      
+      "#skills" : function(){
+        // app.render_skills_page();
+        render_page(2);
+      },
+      "#work" : function(){
+        // app.render_work_page();
+        render_page(3);
+      },
+      "#projects" : function(){
+        url = url.split("#projects/");
 
-  			if (url.length == 1){
-  				app.render_projects_page(data);
-  			} else {
-	  			url = url[1].trim();
-	  			app.render_detailed_project_page(url);
-  			}
-  		},
-  		"#photography" : function(){
+        if (url.length == 1){
+          // app.render_projects_page(data);
+          render_page(4);
+        } else {
+          url = url[1].trim();
+          render_page(8, url);
+          // app.render_detailed_project_page(url);
+        }
+      },
+      "#photography" : function(){
 
-  			app.render_photography_page();
-  		},
-  		"#contact" : function(){
-  			app.render_contact_page();
-  		},
-  		"#skills" : function(){
-  			app.render_skills_page();
-  		}
+        // app.render_photography_page();
+        render_page(5);
+      },
+      "#contact" : function(){
+        // app.render_contact_page();
+        render_page(6);
+      }
+      
   	}
   	if (map[temp]){
   		map[temp]();
   	} else {
-  		app.render_error_page();
+  		render_page(7);
   	}
   }
 

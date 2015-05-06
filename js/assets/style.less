@@ -202,6 +202,45 @@ footer, header, .top-middle{
 }
 
 
+/* ------------------------------------------ CONTACT */
+
+.contact {
+	margin-top: 30px;
+	text-align: left;
+}
+.contact.greeting{
+	color: @text-color;
+}
+.contact.info{
+	margin-top: 50px;
+	text-transform: uppercase;
+}
+.contact.info > span{
+	margin: auto 30px;
+	color: @text-color;
+}
+.contact.email :nth-child(even){
+	color: @accent;
+	/*color: @text-color;*/
+}
+
+.contact.email:before, 
+.contact.linkedin:before,
+.contact.github:before{
+	display: block;
+	/*color: @text-color;*/
+	color: @accent;
+	font-size: 25px;
+}
+.contact.email:before{
+	content: 'EMAIL';
+}
+.contact.linkedin:before{
+	content: 'LINKEDIN';
+}
+.contact.github:before{
+	content: 'GITHUB';
+}
 
 
 /* ------------------------------------------ HEADER */
