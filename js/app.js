@@ -66,8 +66,9 @@ var main = function() {
   	var temp = url.split('/')[0];
   	console.log(temp);
   	// hide whatever page is currently shown
-  	$('.content .page').removeClass('visible');
-  	$('.content .page').addClass('hidden');
+    $('.content .page').removeClass('visible');
+  	$('#menu-list li').removeClass('active');
+    $('.content .page').addClass('hidden');
 
   	var map = {
   		// the homepage

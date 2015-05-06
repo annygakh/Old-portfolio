@@ -65,39 +65,46 @@ app.initialize_rotating_words = function(){
 
 app.render_main_page = function(){
 	var page = $('.main');
-	app.toggle_visibility(page);
+	var li = $('#main');
+	app.toggle_visibility(page, li);
 }
 app.render_contact_page = function(){
 	var page = $('.contact');
-	app.toggle_visibility(page);
+	var li = $('#contact');
+	app.toggle_visibility(page, li);
 }
 app.render_skills_page = function(){
 	var page = $('.skills');
-	app.toggle_visibility(page);
+	var li = $('#skills');
+	app.toggle_visibility(page, li);
 }
 app.render_work_page = function(){
 	var page = $('.work');
-	app.toggle_visibility(page);
+	var li = $('#work');
+	app.toggle_visibility(page, li);
 }
 app.render_projects_page = function(){
 	var page = $('.projects');
-	app.toggle_visibility(page);
+	var li = $('#projects');
+	app.toggle_visibility(page, li);
 }
 
 app.render_photography_page = function(){
 	var page = $('.photography');
-	app.toggle_visibility(page);
+	var li = $('#photography');
+	app.toggle_visibility(page, li);
 }
 app.render_about_page = function(){
 	var page = $('.about');
-	app.toggle_visibility(page);
+	var li = $('#about');
+	app.toggle_visibility(page, li);
 }
 app.render_error_page = function(){
 	var page = $('.error');
-	app.toggle_visibility(page);
+	app.toggle_visibility(page, li);
 }
-app.toggle_visibility = function(page){
-	
+app.toggle_visibility = function(page, li){
+	li.addClass('active');
 	page.addClass('visible');
 	page.removeClass('hidden');
 }
