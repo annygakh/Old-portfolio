@@ -1,3 +1,4 @@
+/* ------------------------------------------ COLORS */
 @accent: #F7CA18;
 @bg-color: #020511;
 
@@ -10,9 +11,10 @@
 @desc-color: #afa787;
 
 @margin-logo-pic: 16px;
-@margin-pic-menu: @margin-logo-pic - 10;
+/*@margin-pic-menu: @margin-logo-pic - 10;*/
+@margin-pic-menu: @margin-logo-pic + 15;
 @margin-rproject-menu: 190px;
-@margin-rproject-top: 50px;
+@margin-rproject-top: 100px;
 @margin-top-header: 30px;
 
 @triangle-size: 250px;
@@ -23,7 +25,7 @@
 @margin-left-all: 90px;
 
 
-
+/* ------------------------------------------ RESETING */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -48,6 +50,7 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+/* ------------------------------------------ GENERAL */
 
 head, body{
 	background-color: @bg-color;
@@ -61,25 +64,33 @@ body{
 	-o-animation: 		fade_in 1s ease-out forwards;
 	animation: 			fade_in 1s ease-out forwards;
 }
+.top-middle{
+	text-align: center;
+}
 
-/* RECENT PROJECT */
+/* ------------------------------------------ RECENT PROJECT */
 @blur: 5px;
-@pic-width: 500px;
-@pic-height: 400px;
+@pic-width: 	450px;
+@pic-height: 	450px;
 .panes {
 	list-style-type: none;
 	position: relative;
 }
 .panes img{
-	max-width: @pic-width;
-	max-height: @pic-height;
-	height: @pic-height;
-	width: @pic-width;
 	margin: -5px 0 0 -5px;
 	position: absolute;
 	top: 0;
 	left: 0;
+	max-width: 100%;
 	z-index: 1;
+
+}
+.carousel{
+	min-height: 250px;
+	min-width: 100px;
+	max-width: 100%;
+	width: 90vmin;
+	height: 50vmin;
 
 }
 .panes li{
@@ -94,22 +105,27 @@ body{
 }
 .carousel {
 	position: relative;
-	/*max-width: @pic-width;*/
-	/*max-height: @pic-height;*/
-	height: @pic-height;
-	width: @pic-width;
+	display: inline-block;
 	overflow: hidden;
 	margin: 10px 0; /*added*/
+
 }
 
 .recent-project{
-	margin-left: @margin-rproject-menu;
+	/*margin: 0 auto;*/
+	padding: 30px;
+	width: 90%;
+	height: 60vh;
+	/*padding-left: @margin-rproject-menu;*/
+	/*padding-left: 	60px;*/
+	/*padding-right: 	60px;*/
+	display: inline-block;
 	padding-top: @margin-rproject-top;
 	text-align: center;
 	color: @accent;
 }
+
 .recent-project .title{
-	display: block;
 	font-size: @menu-font-size;
 	text-transform: uppercase;
 	margin-bottom: 20px;
@@ -132,7 +148,6 @@ body{
 	color: @hover-color;
 }
 .caption {
-	max-width: @pic-width ;
 	position: absolute;
 	text-align: left;
 	/*font-weight: 300;*/
@@ -174,7 +189,7 @@ body{
 
 
 
-/* HEADER */
+/* ------------------------------------------ HEADER */
 header {
 	margin-bottom: @margin-logo-pic;
 	margin-top: @margin-top-header ;
@@ -196,7 +211,7 @@ header {
 	text-align: center;
 	
 }
-/* ROTATING WORDS */
+/* ------------------------------------------ ROTATING WORDS */
 .cd-words-wrapper {
 	position: relative;
 	display: block;
@@ -212,20 +227,31 @@ header .text {
 	left: 0;
 	right: 0;
 }
+@media screen and (max-width: 1010px) and (min-width: 902px){
+	.cd-words-wrapper {
+		left: 50px;
+	}	
+	body, head {
+		background-color: purple;
+	}
 
-/* SIDEBAR */
+}
+
+/* ------------------------------------------ SIDEBAR */
+
 
 .sidebar {
-	/*margin-top: 30px;*/
 	margin-left: @margin-left-all;
 	display: inline-block;
+	float: left;
 }
 
 .content{
-
 	display: inline-block;
 	vertical-align: top;
-
+	min-width:  10%;
+	width: 70%;
+	max-width: 50%;
 }
 .description, .me {
 	display: inline-block;
@@ -237,6 +263,10 @@ header .text {
 	text-transform: uppercase;
 	text-align: left;
 	margin-top: @margin-pic-menu;
+	border-top: 1px solid @accent;
+	border-bottom: 1px solid @accent;
+	display: inline-block;
+
 }
 
 #menu-list a{
@@ -279,7 +309,10 @@ header .text {
 	background-size: @triangle-size @triangle-size;
 	background-repeat: no-repeat;
 }
-/* FOOTER */
+@media screen and (max-width: ) and (min-width: ){
+	
+}
+/* ------------------------------------------ FOOTER */
 @margin-top-footer: 56px;
 @padding-top-footer: 8px;
 @padding-bottom-footer: 40px;
@@ -296,6 +329,7 @@ footer {
 }
 .disclaimer {
 	font-size: 10px;
+	display: inline-block;
 
 }
 footer > * {
@@ -313,4 +347,48 @@ footer > * {
 }
 .social-media a:hover{
 	color: @hover-color;
+}
+
+
+@media screen and (max-width: 1036px) and (min-width: 879px) {
+/* make the recent projects smaller */
+
+	.panes img, .carousel{
+	
+	}
+	body {
+		/*background-color: blue;*/
+	}
+}
+@media screen and (max-width: 879px) {
+	body {
+		background-color: red;
+	}
+} 
+
+@-webkit-keyframes fade_in {
+	from { 
+		-webkit-filter: opacity(0);
+
+
+	 }
+	to {  
+		-webkit-filter: opacity(1);
+	}
+}
+@-o-keyframes fade_in {
+	from {  }
+	to {  }
+}
+@-moz-keyframes fade_in {
+	from {  }
+	to {  }
+}
+@keyframes fade_in {
+	from { 
+		filter: opacity(0);
+	}
+	to {  
+		filter: opacity(1);
+	}
 }
