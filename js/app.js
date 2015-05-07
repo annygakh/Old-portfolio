@@ -63,9 +63,15 @@ var main = function() {
   	var temp = url.split('/')[0];
   	console.log(temp);
   	// hide whatever page is currently shown
+    $('.visible').animate({
+      opacity: 0
+    }, function(){
     $('.content .page').removeClass('visible');
-  	$('#menu-list li').removeClass('active');
+    $('#menu-list li').removeClass('active');
+      
     $('.content .page').addClass('hidden');
+    });
+    
 
   	var map = {
   		// the homepage

@@ -166,7 +166,9 @@ footer, header, .top-middle{
 .summary {
 	margin-top: 30px;
 	width: 90%;
-	height: 60vh;
+	/*height: 60vh; commented out while making things responsive*/
+	height: auto;
+	margin-bottom: 30px;
 }
 @media screen and (max-width: 1005px) and (min-width: 541px){
 	
@@ -181,24 +183,39 @@ footer, header, .top-middle{
 	margin-bottom: 50px;
 }
 
-.recent-project .title {
+/*.recent-project .title {
 	font-size: 15px;
 	
+}*/
+/* ---------------------------------- ALL TITLES ------*/
+@title-size: @menu-font-size;
+@smaller-title-size: @title-size - 10;
+span.title{
+	font-size: @smaller-title-size;
+	color: @accent;
+}
+h1.title{
+	font-size: @title-size;
+	color: @accent;
 }
 .recent-project .title, .projects .title{
-	font-size: @menu-font-size;
 	text-transform: uppercase;
-
 	margin-bottom: 20px;
+}
+@media screen and (max-width: 1005px) and (min-width: 541px){
+	
+}
+@media screen and (max-width: 540px){
+	span .title{
+		font-size: 20px;
+	}
+	
 }
 @controls-font-size: 25px;
 
-.recent-project .sliders, .summary .sliders {
+.sliders span{
 	font-size: @controls-font-size;
 	text-transform: uppercase;
-}
-
-.sliders span{
 	-webkit-filter: opacity(0.4);
 	filter: opacity(0.4);
 }
@@ -208,6 +225,15 @@ footer, header, .top-middle{
 .sliders .prev:hover, .sliders .next:hover{
 	color: @hover-color;
 }
+
+
+@media screen and (max-width: 540px){
+	.sliders span {
+		font-size: 20px;
+	}
+
+}
+
 .caption {
 	position: absolute;
 	text-align: left;
@@ -271,25 +297,32 @@ footer, header, .top-middle{
 .detailed-project .caption.details .how:before{
 	content: 'How it works: ';
 }
-
-.detailed-project .caption .title, 
-.detailed-project .summary .title{
-	font-size: 35px;
+.detailed-project .caption div.title {
+	text-align: left;
+}
+.detailed-project .caption span.title, 
+.detailed-project .summary span.title{
+	/*font-size: 35px;*/
 	color: @accent;
 	text-align: center;
 	text-transform: uppercase;
 
 }
 
-@media screen and (max-width: 540px){
-	
-	.detailed-project .caption .title, 
-	.detailed-project .summary .title{
-		font-size: 25px;
-		color: @accent;
+@media screen and (max-width: 1005px) and (min-width: 541px){
+	.detailed-project .caption div.title {
 		text-align: center;
-		text-transform: uppercase;
+	}
+}
+@media screen and (max-width: 540px){
+	.detailed-project .caption div.title {
+		text-align: center;
+	}
+	.detailed-project .caption span.title, 
+	.detailed-project .summary span.title{
+		/*font-size: 25px;*/
 		font-weight: normal;
+		display: inline-block;
 		
 	}	
 }
@@ -436,13 +469,24 @@ header .text {
 	left: 0;
 	right: 0;
 }
+@media screen and (max-width: 1005px) and (min-width: 541px){
+	.container{
+		display: inline-block;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		margin-right: 60px;
+}
+}
 @media screen and (max-width: 1005px){
-	.container {
-		margin: 40px auto;
-	}
 	header .text {
 		font-size: 20px;
 	}
+}
+@media screen and (max-width: 541px){
+	.container {
+		margin: 40px auto;
+	}
+	
 }
 
 /* ------------------------------------------ SIDEBAR  RESPONSIVE*/
@@ -488,6 +532,8 @@ header .text {
 		max-width: initial;
 		width: auto;
 		margin-top: 30px;
+		margin-right: 20px;
+		margin-left: 20px;
 	}
 
 }
@@ -533,11 +579,17 @@ header .text {
 	animation: swing_in 1s ease-out 1 forwards;
 }
 
-@media screen and (max-width: 1005px)  {
+@media screen and (max-width: 1005px) {
 	#menu-list li {
-		font-size: 20px;
+		font-size: 30px;
 		padding-right: 100px;
 		font-weight: 300;
+	}
+}
+@media screen and (max-width: 541px){
+	#menu-list li{
+		
+		font-size: 20px;
 	}
 }
 
@@ -563,7 +615,11 @@ header .text {
 	background-size: @triangle-size @triangle-size;
 	background-repeat: no-repeat;
 }
-
+@media screen and (max-width: 1000px){
+	#menu-list a:hover:after{
+		background-image: none;
+	}
+}
 /* ------------------------------------------ FOOTER */
 @margin-top-footer: 56px;
 @padding-top-footer: 8px;

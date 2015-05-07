@@ -112,8 +112,15 @@ function render_page(index, url, projects) {
 	if (li != undefined){
 		li.addClass('active');
 	}
-	page.addClass('visible');
-	page.removeClass('hidden');
+	// $('.content .page').removeClass('animated zoomOut infinite');
+	page.animate({
+      opacity: 1
+      
+    },function(){
+		page.addClass('visible');
+    	
+		page.removeClass('hidden');
+    });
 
 }
 function create_detailed_project(name, projects){
