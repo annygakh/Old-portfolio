@@ -50,7 +50,7 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
-/* ------------------------------------------ GENERAL */
+/* ------------------------------------------ GENERAL - RESPONSIVE */
 .page {
 	-webkit-filter: opacity(0);
 	filter: opacity(0);
@@ -61,15 +61,6 @@ time, mark, audio, video {
 	-webkit-filter: opacity(1);
 	filter: opacity(1);
 
-}
-#particles-js{
-	position: absolute;
-	z-index: -3;
-	top: 0;
-	right: 0;
-	display: block;
-	/*width: 200px;*/
-	height: 200px;
 }
 
 head, body{
@@ -90,7 +81,15 @@ footer, header, .top-middle{
 	/*background-color: @bg-color;*/
 }
 
-.hidden, .hidden.recent-project {
+
+.hidden, .hidden.recent-project,
+.hidden.projects.page,
+.hidden.work.page.textpage,
+.hidden.detailed-project.page,
+.hidden.photography.page.textpage,
+.hidde.contact.page.textpage,
+.hidde.error.page
+ {
 	display: none;
 }
 .clear:after {
@@ -101,9 +100,7 @@ footer, header, .top-middle{
     visibility: hidden;
 }
 
-/*.clear {
-	clear:both;
-}*/
+
 /* ------------------------------------------ RECENT PROJECT */
 @blur: 5px;
 @pic-width: 	450px;
@@ -170,6 +167,18 @@ footer, header, .top-middle{
 	margin-top: 30px;
 	width: 90%;
 	height: 60vh;
+}
+@media screen and (max-width: 1005px) and (min-width: 541px){
+	
+}
+@media screen and (max-width: 540px){
+	
+	.summary{
+		margin-top: 0;
+	}
+}
+.projects .summary:last-child {
+	margin-bottom: 50px;
 }
 
 .recent-project .title {
@@ -262,20 +271,30 @@ footer, header, .top-middle{
 .detailed-project .caption.details .how:before{
 	content: 'How it works: ';
 }
-.detailed-project .caption .title{
-	font-size: 35px;
-	text-align: center;
-	color: @accent;
-	/*text-transform: uppercase;*/
-}
+
+.detailed-project .caption .title, 
 .detailed-project .summary .title{
 	font-size: 35px;
+	color: @accent;
+	text-align: center;
 	text-transform: uppercase;
-	font-weight: 300;
 
 }
 
-/* ------------------------------------------ GENERAL ALL PAGES */
+@media screen and (max-width: 540px){
+	
+	.detailed-project .caption .title, 
+	.detailed-project .summary .title{
+		font-size: 25px;
+		color: @accent;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: normal;
+		
+	}	
+}
+
+/* ------------------------------------------ GENERAL ALL PAGES - RESPONSIVE */
 .textpage {
 	margin-top: 30px;
 	text-align: left;
@@ -286,6 +305,14 @@ footer, header, .top-middle{
 .page a{
 	
 	color: @text-color;
+}
+@media screen and (max-width: 1005px) and (min-width: 541px){
+}
+@media screen and (max-width: 540px){
+	.textpage {
+		margin-top: 0;
+	}
+
 }
 /* ------------------------------------------ CONTACT */
 .contact.info{
@@ -349,10 +376,10 @@ footer, header, .top-middle{
 .work .job-position .description li:before{
 	content: '–';
 }
-/* ------------------------------------------ SKILLS */
+
 /* ------------------------------------------ PHOTOGRAPHY */
 
-/* ------------------------------------------ HEADER */
+/* ------------------------------------------ HEADER - RESPONSIVE*/
 header {
 	margin-bottom: @margin-logo-pic;
 	margin-top: @margin-top-header ;
@@ -367,14 +394,33 @@ header {
 }
 .text {
 	color: @desc-color;
-
 	font-weight: 300;
 	z-index: 3;
 	white-space: nowrap;
 	text-align: center;
 	
 }
-/* ------------------------------------------ ROTATING WORDS */
+@media screen and (max-width: 1005px) and (min-width: 541px){
+	header {
+		margin-top: initial;
+		margin-top: initial;
+		margin-left: initial;
+	}
+}
+
+@media screen and (max-width: 540px){
+	header {
+		margin-bottom: initial;
+		margin-top: initial;
+		margin-left: initial;
+	}
+	#logoname{
+		font-size: 40px;
+	}
+
+}
+
+/* ------------------------------------------ ROTATING WORDS - RESPONSIVE*/
 .cd-words-wrapper {
 	position: relative;
 	display: block;
@@ -390,17 +436,16 @@ header .text {
 	left: 0;
 	right: 0;
 }
-@media screen and (max-width: 1010px) and (min-width: 902px){
-	.cd-words-wrapper {
-		left: 50px;
-	}	
-	body, head {
-		background-color: purple;
+@media screen and (max-width: 1005px){
+	.container {
+		margin: 40px auto;
 	}
-
+	header .text {
+		font-size: 20px;
+	}
 }
 
-/* ------------------------------------------ SIDEBAR */
+/* ------------------------------------------ SIDEBAR  RESPONSIVE*/
 
 
 .sidebar {
@@ -408,7 +453,27 @@ header .text {
 	display: inline-block;
 	float: left;
 }
+@media screen and (max-width: 1005px) and (min-width: 500px){
+	.sidebar{
+		margin-left: 40px;
+		float: none;
+	}
+	body, html {
+		background-color: purple;
+	}
+}
+@media screen and (max-width: 500px){
+	.sidebar{
+		margin-left: 0;
+		float: none;
+		/*width: 100%;*/
+		/*display: block;*/
+	}
+	body, html {
+		background-color: olive;
+	}
 
+}	
 .content{
 	display: inline-block;
 	vertical-align: top;
@@ -417,6 +482,14 @@ header .text {
 	width: 70%;
 	max-width: 50%;
 	margin-top: @margin-rproject-top;
+}
+@media screen and (max-width: 1005px) {
+	.content{
+		max-width: initial;
+		width: auto;
+		margin-top: 30px;
+	}
+
 }
 .description, .me {
 	display: inline-block;
@@ -433,7 +506,13 @@ header .text {
 	display: inline-block;
 
 }
-
+ 
+@media screen and (max-width: 540px) {
+	#menu-nav{
+		margin-top: 0px;
+		float: left;
+	}
+}
 #menu-list a{
 	color: @accent;
 	text-decoration: none;
@@ -453,6 +532,16 @@ header .text {
 	-o-animation: swing_in 1s ease-out 1 forwards;
 	animation: swing_in 1s ease-out 1 forwards;
 }
+
+@media screen and (max-width: 1005px)  {
+	#menu-list li {
+		font-size: 20px;
+		padding-right: 100px;
+		font-weight: 300;
+	}
+}
+
+ 
 #menu-list a:hover{
 	color: @hover-color;
 }
@@ -474,9 +563,7 @@ header .text {
 	background-size: @triangle-size @triangle-size;
 	background-repeat: no-repeat;
 }
-@media screen and (max-width: 100px) and (min-width: 99px ){
 
-}
 /* ------------------------------------------ FOOTER */
 @margin-top-footer: 56px;
 @padding-top-footer: 8px;
@@ -503,7 +590,6 @@ header .text {
 
 
 }
-/*footer > * {*/
 .footer > * {
 	display: inline-block;
 }
@@ -523,45 +609,25 @@ header .text {
 
 
 
-@media screen and (max-width: 1036px) and (min-width: 879px) {
+@media screen and (max-width: 1005px) and (min-width: 541px) {
 /* make the recent projects smaller */
-
-	.panes img, .carousel{
 	
-	}
-	body {
-		/*background-color: blue;*/
-	}
 }
-@media screen and (max-width: 879px) {
-	body {
-		background-color: red;
-	}
-} 
+ 
+@media screen and (max-width: 540px) {
+
+}
+
 
 @-webkit-keyframes fade_in {
-	from { 
-		-webkit-filter: opacity(0);
-
-
-	 }
-	to {  
-		-webkit-filter: opacity(1);
-	}
-}
+	from {opacity: 0; } to {opacity: 1; }
+} 
 @-o-keyframes fade_in {
-	from {  }
-	to {  }
+	from {opacity: 0; } to {opacity: 1; } 
 }
 @-moz-keyframes fade_in {
-	from {  }
-	to {  }
+	from {opacity: 0; } to {opacity: 1; }  
 }
 @keyframes fade_in {
-	from { 
-		filter: opacity(0);
-	}
-	to {  
-		filter: opacity(1);
-	}
+	from {opacity: 0; } to {opacity: 1; } 
 }
