@@ -41,7 +41,10 @@
 </head>
 
 <body>
+<!-- <div id="particles-js"></div> -->
+
 	<header>
+	<!-- <div id="particles-js"></div> -->
 		<span id="logoname">Anny Gakhokidze</span>
 		<span class="cd-words-wrapper">
 			<span class="text ">2nd year Computer Science student</span>
@@ -51,23 +54,20 @@
 	</header>
 	<div class="top-middle">
 		<div class="sidebar">
+
 			<div class="container">
 				<img class="pic" src="images/me.png">
-				
-				
+				<span class="disclaimer">Taken by Justin Lee</span>
 			</div>
-			<nav id="menu-nav" class="">
-			<ul id="menu-list" style="margin:0">
 
-				<li id="main" class="active"> 
+			<nav id="menu-nav" class="">
+			<ul id="menu-list" >
+
+				<li id="main" > 
 					<a href="#/">Main</a>
 				</li>
 				<li id="about">
 					<a  href="#about/">About me</a>
-				</li>
-				
-				<li id="skills"> 
-					<a  href="#skills/">Skills</a>
 				</li>
 				
 				<li  id="work"> 
@@ -88,13 +88,16 @@
 				
 					
 			</ul>
+
 			</nav>
+			
 		</div>
-		<div class="content">
+
+		<div class="content clear">
 			<div class="page hidden main recent-project ">
 				<span class="title" >Recent projects</span>
-				<div class="summary 0">
-				<div class="carousel active 0" id="0">
+				<div class="summary clear 0">
+					<div class="carousel active 0" id="0">
 					<ul class="panes 0">
 						<li>
 							<img src="images/projects/cafeviz3.png">
@@ -127,18 +130,19 @@
 							April 2015
 						</p>
 					</div>
-				</div>
-				<div class="sliders">
-					<span class="prev 0">prev</span>
-					<span>//</span>
-					<span class="next 0">next</span>
-				</div>
+					</div>
+					<div class="sliders">
+						<span class="prev 0">prev</span>
+						<span>//</span>
+						<span class="next 0">next</span>
+					</div>
 
-				
+					
 				</div>
 				</div>
 			<div class="page textpage hidden about">
-				<p>
+				<div class="p">
+					<p>
 						<span class="construction-message">
 					This section is currently under construction. However, a short summary
 					is available.
@@ -162,17 +166,12 @@
 					<br>
 						I speak Russian. Recently, I started skiing, and am proud to tell 
 					you that after 4 times visiting the slopes, I am an official blue square trails member.
-
-
 				</p>
-			</div>
-			<div class="page textpage hidden skills">
-				<div class="p">
-					<span class="construction-message">
-						This section is currently under construction. However, a short summary
-						is available.
-					</span>
-					<table class="skills">
+				
+				<br>
+				<br>
+				<table class="skills">
+					<caption>Languages</caption>
 						<tr >
 							<th>Experienced</th>
 							<th>Intermediate</th>
@@ -199,11 +198,23 @@
 							<td></td>
 							<td>HTML</td>
 							
-						</tr>
-
-					</table>
+						</tr></table>
+				<div class="courses-taken">
+					<span>Courses taken</span>
+					<ul class="courses">
+						<li>
+							<span class="course-name">
+								CPSC210
+							</span>
+							<span class="description">
+								Introduction to Java programming, Object Oriented concepts, and Android programming.
+							</span>
+						</li>
+					</ul>
+				</div>
 				</div>
 			</div>
+		
 			<div class="page textpage hidden work">
 				<div class="p">
 					<span class="construction-message">
@@ -245,14 +256,14 @@
 			<div class="page hidden projects">
 				<span class="title" >Projects</span>
 			</div>
-			<div class="page hidden detailed-project">
-			
+			<div class="page hidden clear detailed-project">
+
 			</div>
 			<div class="page textpage hidden photography">
 				<div class="p">
 					Unfortuately, at this time I don’t have all of my photographs to show you.
-					Instead, you can view some of them on <a href="https://www.flickr.com/photos/anny-gakhokidze/"></a>.
-					If you wish to see my collection of event photographs, please <a  href="#contact/">contact me</a>
+					Instead, you can view some of them on <a href="https://www.flickr.com/photos/anny-gakhokidze/">Flickr</a>.
+					If you wish to see my collection of event photographs, please <a  href="#contact/">contact me.</a>
 				</div>
 			</div>
 			<div class="page textpage hidden contact">
@@ -278,15 +289,74 @@
 					</span>
 				</div>
 			</div>
+		 
 			<div class="page hidden error">
 				Oh oh. something went wrong
 			</div>
+		 <div class="clear"></div>
+			
 		</div>
+		 <div class="clear"></div>
 	</div>
-		
-	<script type="text/template" id="detailed-project-template"></script>
+	<script type="text/template" id="detailed-project-template">
+	
+		<div class="summary <%=id%> clear">
+			<span class="title"><%=name%></span>
+			<div class="carousel active <%=id%>" id="<%=id%>">
+				<ul class="panes <%=id%>">
+					<li>
+						<img src="images/projects/cafeviz3.png">
+					</li>
+					<li >
+						<img src="images/projects/cafeviz2.png">
+					</li>
+				</ul>
+			
+				
+			</div>
+			<div class="sliders">
+				<span class="prev <%=id%>">prev</span>
+				<span>//</span>
+				<span class="next <%=id%>">next</span>
+			</div>
+			<div class="caption short">
+				<span class="title">summary</span>
+
+				<p class="concept">
+					<%=concept%> 
+				</p>
+
+				<p class="toolkit">
+					<%=toolkit%>
+				</p>
+
+				<p class="links"> 
+					<a href="<%=link%>">Source code</a> 
+				</p>
+
+				<p class="date">
+					<%=date%>
+				</p>
+			</div>
+			<div class="caption details">
+				<div>
+					<span class="title">details</span>
+					
+				</div>
+				<p class="background">
+					<%=background%>
+				</p>
+				<p class="what">
+					<%=what%>	
+				</p>
+				<p class="how">
+					<%=how%> 
+				</p>
+			</div>
+		</div>
+	</script>
 	<script type="text/template" id="summary-project-template">
-	<div class="summary <%=id%>" id="<%=id%>">
+	<div class="summary clear <%=id%>" id="<%=id%>">
 <!--removed summary from div below-->
 			<div class="carousel active <%=id%>">
 				<ul class="panes <%=id%>">
@@ -314,7 +384,7 @@
 
 					<p class="links"> 
 						<a href="<%=link%>">Source code</a> 
-						<a class="link" data-name="<%=name%>" href="#<%=name%>">detailed description</a> 
+						<a class="link" data-name="<%=name%>" href="#projects/<%=name%>">detailed description</a> 
 					</p>
 
 					<p class="date">
@@ -330,7 +400,7 @@
 			</div>
 	</div>
 		         </script>
-	<footer>
+	<!-- <footer class="footer">
 		<span class="social-media"> <a href="https://www.linkedin.com/pub/anny-gakhokidze/75/a17/519">linkedin</a></span>
 		<div>
 			<span class="disclaimer"> 
@@ -343,7 +413,7 @@
 			Except for that photo of me. That is taken by Justin Lee.</span>
 		</div>
 		<span class="social-media"> <a href="https://github.com/annygakh">Github</a></span>
-	</footer>
+	</footer> -->
 	<script src="js/clicker_callback.js"></script>
 	<script src="js/extra.js"></script>
 
@@ -356,6 +426,7 @@
 	<script src="js/pages/skills.js"></script>
 
 	<script src="js/app.js"></script>
+	<script src="js/lib/particles.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 var app = app || {};
-
+var products = products || {};
 app.initialize_click_listeners = function(){
 	$('#me').on('click', app.goto_main);
 	$('#skills').on('click', app.goto_skills);
@@ -63,54 +63,9 @@ app.initialize_rotating_words = function(){
 	}
 }
 
-// app.render_main_page = function(){
-// 	// var page = $('.main');
-// 	// var li = $('#main');
-// 	app.toggle_visibility(page, li);
-// }
-// app.render_contact_page = function(){
-// 	// var page = $('.contact');
-// 	// var li = $('#contact');
-// 	app.toggle_visibility(page, li);
-// }
-// app.render_skills_page = function(){
-// 	// var page = $('.skills');
-// 	// var li = $('#skills');
-// 	app.toggle_visibility(page, li);
-// }
-// app.render_work_page = function(){
-// 	// var page = $('.work');
-// 	// var li = $('#work');
-// 	app.toggle_visibility(page, li);
-// }
-// app.render_projects_page = function(){
-// 	// var page = $('.projects');
-// 	// var li = $('#projects');
-// 	app.toggle_visibility(page, li);
-// }
-
-// app.render_photography_page = function(){
-// 	// var page = $('.photography');
-// 	// var li = $('#photography');
-// 	app.toggle_visibility(page, li);
-// }
-// app.render_about_page = function(){
-// 	// var page = $('.about');
-// 	// var li = $('#about');
-// 	app.toggle_visibility(page, li);
-// }
-// app.render_error_page = function(){
-// 	var page = $('.error');
-
-// 	app.toggle_visibility(page, null);
-// }
-// app.toggle_visibility = function(page, li){
-// 	li.addClass('active');
-// 	page.addClass('visible');
-// 	page.removeClass('hidden');
-// }
-function render_page(index, url) {
+function render_page(index, url, projects) {
 	var url = url || {};
+	var projects = projects || {};
 	var page, li = undefined;
 	switch(index){
 		case 0:
@@ -121,10 +76,10 @@ function render_page(index, url) {
 			page = $('.about');
 			li = $('#about');
 			break;
-		case 2:
-			page = $('.skills');
-			li = $('#skills');
-			break;
+		// case 2:
+		// 	page = $('.skills');
+		// 	li = $('#skills');
+		// 	break;
 		case 3:
 			page = $('.work');
 			li = $('#work');
@@ -146,7 +101,12 @@ function render_page(index, url) {
 			break;
 		case 8:
 			page = $('.detailed-project');
+			create_detailed_project(url, projects);
 			break;
+		default:
+			page = $('.error');
+			break;
+
 
 	}
 	if (li != undefined){
@@ -156,10 +116,38 @@ function render_page(index, url) {
 	page.removeClass('hidden');
 
 }
-function render_detailed_project_page(url){
-	var projects = ["cafeviz", "booky"],
-	results = [];
-	// TODO
+function create_detailed_project(name, projects){
+	console.log(name);
+	for (var i = 0; i < projects.length; i++){
+		var obj = projects[i];
+		var obj_name = obj.name.toLowerCase();
+		
+		if (obj_name == name.toLowerCase()){
+			console.log("match");
+			var short = obj["short-summary"];
+			var details = obj["details"];
+			var unique_id = "d" + obj.id;
+			var attrs = {
+				id: unique_id,
+				name: obj_name,
+				concept: short.concept,
+				toolkit: short.toolkit,
+				link: short["source-code"],
+				date: short.date,
+				background: details.background,
+				what : details["what-i-did"],
+				how : details["how-it-works"],
+			}
+
+			var template = $('#detailed-project-template').html();
+			var templ = _.template(template);
+
+			$('.detailed-project').html(templ(attrs));
+			initialize_carousel(unique_id);
+		}
+
+	}
+
 }
 
 

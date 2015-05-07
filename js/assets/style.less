@@ -62,6 +62,16 @@ time, mark, audio, video {
 	filter: opacity(1);
 
 }
+#particles-js{
+	position: absolute;
+	z-index: -3;
+	top: 0;
+	right: 0;
+	display: block;
+	/*width: 200px;*/
+	height: 200px;
+}
+
 head, body{
 	background-color: @bg-color;
 	
@@ -77,11 +87,23 @@ footer, header, .top-middle{
 .top-middle{
 	text-align: center;
 	margin-bottom: 150px;
+	/*background-color: @bg-color;*/
 }
 
 .hidden, .hidden.recent-project {
 	display: none;
 }
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/*.clear {
+	clear:both;
+}*/
 /* ------------------------------------------ RECENT PROJECT */
 @blur: 5px;
 @pic-width: 	450px;
@@ -100,6 +122,10 @@ footer, header, .top-middle{
 	background-clip: 20px 20px; 
 
 }
+.container .disclaimer{
+	display: block; /*  added*/
+
+} 
 .carousel{
 	min-height: 250px;
 	min-width: 100px;
@@ -200,7 +226,43 @@ footer, header, .top-middle{
 .caption .name:before{
 	content: 'Name: ';
 }
+/* ------------------------------------------ DETAILED PROJECT */
+.caption.short, .caption.details {
+	/*position: initial;*/
+	display: block;
+	position: relative;
+	background-color: initial;
+	padding: 5px;
+}
+.detailed-project .caption p {
+	margin: 10px auto;
+}
+.detailed-project .caption.details .background:before, 
+.detailed-project .caption.details .what:before,
+.detailed-project .caption.details .how:before{
+	color: @accent;
+}
+.detailed-project .caption.details .background:before{
+	content: 'Background: ';
+}
+.detailed-project .caption.details .what:before{
+	content: 'What I did: ';
+}
+.detailed-project .caption.details .how:before{
+	content: 'How it works: ';
+}
+.detailed-project .caption .title{
+	font-size: 35px;
+	text-align: center;
+	color: @accent;
+	/*text-transform: uppercase;*/
+}
+.detailed-project .summary .title{
+	font-size: 35px;
+	text-transform: uppercase;
+	font-weight: 300;
 
+}
 
 /* ------------------------------------------ GENERAL ALL PAGES */
 .textpage {
@@ -411,20 +473,27 @@ header .text {
 @footer-disclaimer-opacity: 0.4;
 @footer-social-media-opacity: 0.3;
 
-footer {
+/*footer {*/
+.footer {
 	margin-top: @margin-top-footer;
 	padding-top: @padding-top-footer;
 	padding-bottom: @padding-bottom-footer;
 	text-align: center;
 	-webkit-filter: opacity(@footer-disclaimer-opacity);
 	filter: opacity(@footer-disclaimer-opacity);
+
 }
 .disclaimer {
 	font-size: 10px;
+
 	display: inline-block;
+-webkit-filter: opacity(@footer-disclaimer-opacity);
+	filter: opacity(@footer-disclaimer-opacity);
+
 
 }
-footer > * {
+/*footer > * {*/
+.footer > * {
 	display: inline-block;
 }
 .social-media {
@@ -440,6 +509,7 @@ footer > * {
 .social-media a:hover{
 	color: @hover-color;
 }
+
 
 
 @media screen and (max-width: 1036px) and (min-width: 879px) {

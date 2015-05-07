@@ -1,37 +1,36 @@
 var app = app || {};
-var data;
+var projects;
 var main = function() {
   // app.initialize_click_listeners();
   initialize_carousel(0);
   initialize_hover_blur_caption(0);
   app.initialize_rotating_words();
-  var products = [];
+  var projects = [];
 
   get_projects();
-  render(window.location.hash); // follow the link
+ // follow the link
 
   
   function get_projects() {
     $.getJSON("./projects.json", function(data){
       console.log("getJson");
-      // get data about our products
-      products = data;
+      // get data about our projects
+      projects = data;
       // console.log(data.length);
       generate_projects_html(data);
+      render(window.location.hash); 
     });
   }
 
   
   function generate_projects_html(data) {
-      console.log("generate_projects_html");
+      console.log("got json completed");
       var list = $('.projects');
       var template_script = $('#summary-project-template').html();
       var template = _.template(template_script);
-      console.log(data[0]);
 
     for (var i = 0; i < data.length; i++){
       var obj = data[i];
-      console.log(obj);
       var obj_short_summary = obj["short-summary"];
       var attrs = {
         "name" : obj.name,
@@ -43,7 +42,6 @@ var main = function() {
       }
 
 
-      console.log(obj["concept"]);
       list.append(template(attrs));
       initialize_carousel(obj.id);
       initialize_hover_blur_caption(obj.id);
@@ -85,10 +83,10 @@ var main = function() {
         // app.render_about_page();
         render_page(1);
       },      
-      "#skills" : function(){
-        // app.render_skills_page();
-        render_page(2);
-      },
+      // "#skills" : function(){
+      //   // app.render_skills_page();
+      //   render_page(2);
+      // },
       "#work" : function(){
         // app.render_work_page();
         render_page(3);
@@ -96,12 +94,12 @@ var main = function() {
       "#projects" : function(){
         url = url.split("#projects/");
 
-        if (url[0] == ""){
+        if (url[1] == ""){
           // app.render_projects_page(data);
           render_page(4);
         } else {
           url = url[1].trim();
-          render_page(8, url);
+          render_page(8, url, projects);
           // app.render_detailed_project_page(url);
         }
       },
@@ -127,8 +125,7 @@ var main = function() {
 
 
   
-
-
+ 
 
 
 };
