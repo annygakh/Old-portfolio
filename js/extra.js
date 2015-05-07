@@ -137,6 +137,7 @@ function create_detailed_project(name, projects){
 				background: details.background,
 				what : details["what-i-did"],
 				how : details["how-it-works"],
+				photos : obj.pictures
 			}
 
 			var template = $('#detailed-project-template').html();

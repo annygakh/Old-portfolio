@@ -304,12 +304,11 @@
 			<span class="title"><%=name%></span>
 			<div class="carousel active <%=id%>" id="<%=id%>">
 				<ul class="panes <%=id%>">
+					<% _.each(photos, function(photo){ %>
 					<li>
-						<img src="images/projects/cafeviz3.png">
+						<img src="<%=photo%>">
 					</li>
-					<li >
-						<img src="images/projects/cafeviz2.png">
-					</li>
+					<%});%>
 				</ul>
 			
 				
