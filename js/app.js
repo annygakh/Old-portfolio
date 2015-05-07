@@ -1,12 +1,9 @@
 var app = app || {};
 var projects;
 var main = function() {
-  // app.initialize_click_listeners();
-  initialize_carousel(0);
-  initialize_hover_blur_caption(0);
+  
   app.initialize_rotating_words();
   var projects = [];
-
   get_projects();
  // follow the link
 
@@ -18,6 +15,7 @@ var main = function() {
       projects = data;
       // console.log(data.length);
       generate_projects_html(data);
+      generate_recent_project_html(data);
       render(window.location.hash); 
     });
   }
@@ -39,6 +37,7 @@ var main = function() {
         "toolkit" : obj_short_summary["toolkit"],
         "link" : obj_short_summary["link"],
         "date" : obj_short_summary["date"],
+        "photos" : obj.pictures
       }
 
 

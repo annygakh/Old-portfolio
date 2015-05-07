@@ -150,6 +150,27 @@ function create_detailed_project(name, projects){
 	}
 
 }
+function generate_recent_project_html(projects){
+	var page = $('.recent-project');
+	var template_script = $('#summary-project-template').html();
+	var template = _.template(template_script);
+
+	var recent_obj = projects[0];
+	var short_summary = recent_obj["short-summary"];
+	var unique_id = "i" + recent_obj.id;
+	var attrs = {
+	  "name" : recent_obj.name,
+	  "id" : unique_id,
+	  "concept" : short_summary["concept"],
+	  "toolkit" : short_summary["toolkit"],
+	  "link" : short_summary["link"],
+	  "date" : short_summary["date"],
+	  "photos" : recent_obj.pictures
+	}
+	page.append(template(attrs));
+	initialize_carousel(unique_id);
+	initialize_hover_blur_caption(unique_id);
+}
 
 
 

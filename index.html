@@ -96,49 +96,7 @@
 		<div class="content clear">
 			<div class="page hidden main recent-project ">
 				<span class="title" >Recent projects</span>
-				<div class="summary clear 0">
-					<div class="carousel active 0" id="0">
-					<ul class="panes 0">
-						<li>
-							<img src="images/projects/cafeviz3.png">
-						</li>
-						<li >
-							<img src="images/projects/cafeviz2.png">
-						</li>
-					</ul>
 				
-					<div class="caption 0">
-
-						<p class="name">
-							Cafeviz
-						</p>
-
-						<p class="concept">
-							Interactive heatmap of restaraunts where the weight is determined by the rating of the restaraunt. 
-						</p>
-
-						<p class="toolkit">
-							Javascript, Google Maps, Foursquare
-						</p>
-
-						<p class="links"> 
-							<a href="https://github.com/annygakh/cafeviz">Source code</a> 
-							<a href="#">detailed description</a> 
-						</p>
-
-						<p class="date">
-							April 2015
-						</p>
-					</div>
-					</div>
-					<div class="sliders">
-						<span class="prev 0">prev</span>
-						<span>//</span>
-						<span class="next 0">next</span>
-					</div>
-
-					
-				</div>
 				</div>
 			<div class="page textpage hidden about">
 				<div class="p">
@@ -359,12 +317,11 @@
 <!--removed summary from div below-->
 			<div class="carousel active <%=id%>">
 				<ul class="panes <%=id%>">
+					<% _.each(photos, function(photo){ %>
 					<li>
-						<img src="images/projects/cafeviz3.png">
+						<img src="<%=photo%>">
 					</li>
-					<li >
-						<img src="images/projects/cafeviz2.png">
-					</li>
+					<%});%>
 				</ul>
 			
 				<div class="caption <%=id%>">
