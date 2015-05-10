@@ -16,9 +16,8 @@
       "how-it-works": "Whenever a user drags the map to a new area, an ajax request is sent to Foursquare, with the latitude and longitude of the center of the map. When the response is received, it is parsed - latitude, longitude, name, hours open and rating of each place is extracted. Each marker has a latitude, longitude, and weight - rating attributes. In additon, each marker has a listener, that listens for click events on the marker, and displays a tiny information window with name, rating and open hours of the restaraunt. "
     },
     "pictures": [
-      "images/projects/cafeviz3.png",
-      "images/projects/cafeviz3.png",
-      "images/projects/greensort1.png"
+      "images/projects/cafeviz1.png",
+      "images/projects/cafeviz2.png"
     ]
   },
   {
@@ -38,8 +37,8 @@
       "how-it-works": "Whenever a user drags the map to a new area, an ajax request is sent to Foursquare, with the latitude and longitude of the center of the map. When the response is received, it is parsed - latitude, longitude, name, hours open and rating of each place is extracted. Each marker has a latitude, longitude, and weight - rating attributes. In additon, each marker has a listener, that listens for click events on the marker, and displays a tiny information window with name, rating and open hours of the restaraunt. "
     },
     "pictures": [
-      "images/projects/cafeviz3.png",
-      "images/projects/cafeviz3.png"
+      "images/projects/booky.png",
+      "images/projects/booky2.png"
     ]
   }
 ]

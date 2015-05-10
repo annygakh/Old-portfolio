@@ -228,10 +228,12 @@ function initialize_carousel(id) {
 	function fade_out(i){
 		slides().eq(i).removeClass('active');
 		slides().eq(i).fadeOut($transition_time);
+		slides().eq(i).addClass('hidden');
 
 	}
 	function fade_in(i){
 		slides().eq(i).fadeIn($transition_time);
+		slides().eq(i).removeClass('hidden');
 	 	slides().eq(i).addClass('active');
 	}
 	function switch_to_prev_carousel(){
