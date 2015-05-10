@@ -137,6 +137,7 @@ function create_detailed_project(name, projects){
 			var attrs = {
 				id: unique_id,
 				name: obj_name,
+				type: obj["type"],
 				concept: short.concept,
 				toolkit: short.toolkit,
 				link: short["source-code"],
@@ -168,6 +169,7 @@ function generate_recent_project_html(projects){
 	var attrs = {
 	  "name" : recent_obj.name,
 	  "id" : unique_id,
+	  "type" : recent_obj["type"],
 	  "concept" : short_summary["concept"],
 	  "toolkit" : short_summary["toolkit"],
 	  "link" : short_summary["link"],

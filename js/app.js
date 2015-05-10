@@ -33,6 +33,7 @@ var main = function() {
       var attrs = {
         "name" : obj.name,
         "id" : obj.id,
+        "type" : obj["type"],
         "concept" : obj_short_summary["concept"],
         "toolkit" : obj_short_summary["toolkit"],
         "link" : obj_short_summary["link"],

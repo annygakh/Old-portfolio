@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Cafeviz",
-    "type": "personal",
+    "type": "Personal project",
     "short-summary": {
       "concept": " Interactive heatmap of restaraunts where the weight is determined by the rating of the restaraunt. ",
       "toolkit": "Javascript, Google Maps, Foursquare",
@@ -23,22 +23,111 @@
   {
     "id": 2,
     "name": "Booky",
-    "type": "personal",
+    "type": "Personal project",
     "short-summary": {
       "concept": "A web application that lets you bookmark 9 websites for easy access to them, when you open a new tab or a new window",
-      "toolkit": "Javascript, Backbone.js",
+      "toolkit": "Javascript, Backbone.js, Underscore.js",
       "source-code": "https://github.com/annygakh/booky",
       "detailed-descripton": "",
       "date": "March 2015"
     },
     "details": {
-      "background": "After seeing multiple data visualization projects online, I wanted to give such type of projects a try. I figured it would be interesting to see which regions have high rated restaraunts and in future, incorporate other relevant datasets such as population data, and attempt to find whether there is a correlation between them.",
-      "what-i-did": "I completed this project from scratch. With the help of Google Map code demos, it was easy to work with the map, plot markers and add a heatmap layer. ",
-      "how-it-works": "Whenever a user drags the map to a new area, an ajax request is sent to Foursquare, with the latitude and longitude of the center of the map. When the response is received, it is parsed - latitude, longitude, name, hours open and rating of each place is extracted. Each marker has a latitude, longitude, and weight - rating attributes. In additon, each marker has a listener, that listens for click events on the marker, and displays a tiny information window with name, rating and open hours of the restaraunt. "
+      "background": "After multiple attempts to find the perfect bookmarking extension for my browser, I decided to create my own. I didn't create an extension, but I created a web application. Users can set their favourite browser to open this web application whenever a new tab is opened. In future I am planning to add more features such as letting users increase the initial amount of bookmarks they can have.",
+      "what-i-did": "This project was done by myself from scratch. ",
+      "how-it-works": "When the user opens the web-application for the first time, local storage for the Booky is initialized. Initially there is a fixed number of empty div elements on the page. Whenever a user clicks on any one of those elements, a form pops up asking the user to input the title and the url of the website to bookmark. After the user has completed the form, a new Bookmark model is created and saved to local storage, with the title and url of the website, and the column and row of the div element that the user clicked, so that the exact placement of this bookmark can be remembered for subsequent launches of the Booky application. "
     },
     "pictures": [
       "images/projects/booky.png",
       "images/projects/booky2.png"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Canski",
+    "type": "Personal project",
+    "short-summary": {
+      "concept": "A web application that lets you keeps you updated about the status of skiing trails in Vancouver area",
+      "toolkit": "Java, Android, Node.js, Firebase",
+      "source-code": "https://github.com/annygakh/canski",
+      "detailed-descripton": "",
+      "date": "February 2015"
+    },
+    "details": {
+      "background": "Ever since I started skiing I kept an eye out for how many trails were open on each mountain around Vancouver area. That quickly got tiring for me and of course I decided to automate the task.",
+      "what-i-did": "I completed this project from scratch by myself.",
+      "how-it-works": "I created a Node.js script, that visits 4 given local mountain websites, and looks for the information about the number of trails open on each website and uploads it to Firebase. This script is located on the github page for this project. I wrote another command line script, that downloads the web-scraper script from my github page and runs it as a node program on a remote server. This command line script is executed every 4 hours. The Android application and the web application establish a Firebase connection when they are launched initially, and listen to any changes in values and update the status on the screens accordingly.  The Android application also has a 'report bug' feature which allows users to email me reports about bugs or requests for new features."
+    },
+    "pictures": [
+      "images/projects/canski1.png",
+      "images/projects/canski2.png",
+      "images/projects/canski3.png"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Greensort",
+    "type": "Personal project",
+    "short-summary": {
+      "concept": "Educational browser game designed to teach children about which items belong in paper, garbage, compost, recycling bins",
+      "toolkit": "Javascript, HTML5 Canvas",
+      "source-code": "https://github.com/annygakh/canski",
+      "detailed-descripton": "",
+      "date": "February 2015"
+    },
+    "details": {
+      "background": "My friends and I decided to participate in hackathon 'nwHacks'. The theme was sustainability. For a long time I wanted to learn how to create browser games and this hackathon was the perfect opportunity to do so. To get started, we watched a tutorial on how to create a basic snake game.",
+      "what-i-did": "All of us completed the tutorial on our own, building the foundation of the game. Afterwards, I worked on creating images for our game and for changing the image of the sprite based on the direction the sprite is moving.",
+      "how-it-works": "We used the canvas element for our game. The game loop consists of the update function and the draw function. The update function checks if there are any collisions between the sprite and the items or the sprite and the wall. If there is a collision between the sprite and the item, and the item is the one that belongs to the bin that the sprite represents, then the snake grows, otherwise the game is over, and the appropriate message is shown to the user, explaining which bin the item belongs to. "
+    },
+    "pictures": [
+      "images/projects/greensort1.png",
+      "images/projects/greensort2.png",
+      "images/projects/greensort3.png",
+      "images/projects/greensort4.png",
+      "images/projects/greensort5.png"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Thundr",
+    "type": "Academic project",
+    "short-summary": {
+      "concept": "A web-application for students of UBC. It offers features such as easier browsing of courses, the ability to create a worklist, the ability to view all prerequisites for a certain course and more.",
+      "toolkit": "Javascript, Backbone.js, Underscore.js, Parse, CSS, HTML",
+      "source-code": "https://github.com/annygakh/thundr",
+      "detailed-descripton": "",
+      "date": "January 2015 - April 2015"
+    },
+    "details": {
+      "background": "This application was done for one of the Computer Science courses that I took. We were required to work with a large dataset and display the data in a tabular form or in form of a map. ",
+      "what-i-did": "I set up the Backbone framework for our project by creating the necessary models, collections and views. I worked on parsing the user's input, creating appropriate Parse queries and displaying the information to the user. I created the algorithms for finding all prerequisite courses for any given course (each course in our database only had information about the immediate prerequisite courses), and for finding courses that can be taken as a result of taking a certain course or courses. ",
+      "how-it-works": "One of my teammates created a web scraping script that visits the pages of each course, extracts information, and inputs that information to our Parse database. We have two classes in our database - Course and Section. Course class contains information such as the course codes of prerequisite and corequisite courses and links to corresponding sections for this course. Section class contains information such as what type of section it is (lecture, lab, tutorial, etc), start time and end time, days of the week the section takes place, the professor(s) name(s), the name of the course it corresponds to and etc. <br> <br> After the user inputs information into the text boxes and presses 'Search', the information is extracted, and based on which text boxes were filled out, appropriate Parse queries are formed. If the user only entered the start and end time, a query will be created to search only through sections and it will return the corresponding courses of sections with start and end times being within the given time frame. <br> <br> Some queries only search through courses and some queries only search through sections. Afterwards, when the response is received, the information is displayed to the user in tabular form. <br> <br> When the user wants to find out the prerequisite courses for a certain course, a query that looks for that course is created, and after the response is received, the prerequisite courses for that course are extracted and added to the result list, and for each of those courses, another query is formed that searches for those course, and when the response is received, the prerequisite courses are extracted and added to the result list and so on, until the search hits a certain number of iterations set by the user (by default the level of prerequisite courses shown is 3, but the user can limit it to 1 and only see the immediate prerequisites). <br><br>  When the user wants to find out the courses that can be taken as a result of taking a certain course or courses, a query is formed. What that query does is it looks through all courses and only returns those courses that have one or more of the given courses in it's list of prerequisite courses.."
+    },
+    "pictures": [
+      "images/projects/thundr1.png",
+      "images/projects/thundr2.png",
+      "images/projects/thundr3.png",
+      "images/projects/thundr4.png"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "DocApp",
+    "type": "Academic project",
+    "short-summary": {
+      "concept": "A web-application that eases communication between doctors, pharmacies and patients",
+      "toolkit": "SQL",
+      "source-code": "https://github.com/jonrodness/cpsc304Project",
+      "detailed-descripton": "",
+      "date": "February 2015 - April 2015"
+    },
+    "details": {
+      "background": "This application was done for one of the Computer Science courses that I took. We were required to create an application that would benefit from a database. ",
+      "what-i-did": "All of us worked on the creation of an ER diagram, specifications and features for our application. Along with another person, I created SQL queries for various features of our database.",
+      "how-it-works": "There are three types of users in our applications - pharmacists, doctors and patients. There are various things each user is able to do. For example, a patient can schedule, cancel or view their appointments, a doctor can change their personal information and view a list of previous drugs taken by a patient and a pharmacist can change the status of the prescription to 'ready for pick up' or update the number of refills so far for a prescription. There is a SQL query for each thing the user is able to do. "
+    },
+    "pictures": [
+      "images/projects/nopic.png"
     ]
   }
 ]

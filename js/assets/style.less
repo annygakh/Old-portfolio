@@ -54,7 +54,7 @@ time, mark, audio, video {
 .page {
 	-webkit-filter: opacity(0);
 	filter: opacity(0);
-	display: none;
+	/*display: none;*/
 
 }
 .page.visible{
@@ -111,10 +111,12 @@ footer, header, .top-middle{
 }
 .panes img{
 	margin: -5px 0 0 -5px;
-	/*position: absolute;*/
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 	max-width: 100%;
 	z-index: 1;
+	background-clip: 20px 20px; 
 
 }
 .container .disclaimer{
@@ -125,15 +127,15 @@ footer, header, .top-middle{
 	min-height: 250px;
 	min-width: 100px;
 	max-width: 100%;
-	/*width: 80vmin;*/
-	/*height: 50vmin;*/
+	width: 80vmin;
+	height: 50vmin;
 
 }
 .panes li{
 	display: none;
-	position: relative; 
-	width: 100%;
-	height: auto;
+	position: absolute; 
+	top: 0; 
+	left: 0; 
 }
 .blurred-image{
 	-webkit-filter: blur(@blur);
@@ -144,8 +146,6 @@ footer, header, .top-middle{
 	display: inline-block;
 	overflow: hidden;
 	margin: 10px 0; /*added*/
-	width: 100%;
-	height: auto;
 
 }
 
@@ -153,8 +153,8 @@ footer, header, .top-middle{
 	/*margin: 0 auto;*/
 	/*padding: 30px;*/
 	
-	width: 100%;
-	height: auto;
+	width: 90%;
+	height: 60vh;
 	/*padding-left: @margin-rproject-menu;*/
 	/*padding-left: 	60px;*/
 	/*padding-right: 	60px;*/
@@ -165,7 +165,7 @@ footer, header, .top-middle{
 }
 .summary {
 	margin-top: 30px;
-	width: 100%;
+	width: 90%;
 	/*height: 60vh; commented out while making things responsive*/
 	height: auto;
 	margin-bottom: 30px;
@@ -252,7 +252,8 @@ h1.title{
 .caption .concept:before,
 .caption .toolkit:before,
 .caption .links:before,
-.caption .date:before {
+.caption .date:before,
+.caption .type:before {
 	color: @accent;
 }
 .caption .links:before{
@@ -271,6 +272,9 @@ h1.title{
 
 .caption .name:before{
 	content: 'Name: ';
+}
+.caption .type:before{
+	content: 'Type: ';
 }
 /* ------------------------------------------ DETAILED PROJECT */
 .caption.short, .caption.details {
@@ -523,6 +527,7 @@ header .text {
 	vertical-align: top;
 	min-width:  10%;
 	min-height:  60vmin;
+	width: 70%;
 	max-width: 50%;
 	margin-top: @margin-rproject-top;
 }
