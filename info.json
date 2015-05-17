@@ -8,6 +8,32 @@
   "work": [
     "\tThis section is currently under construction. However, a short summary is available.",
     "\tTeaching Assistant for CPSC210- University of British Columbia - June 2014 - present -CPSC210: Introductory course to Java and a little bit of Android programming - Helped students complete their first Android application",
-    "\tI am currently available for a coop postion, starting September 2015. Feel free to contact me if you are interested."
-  ]
+    "\tI am currently available for a coop position, starting September 2015. Feel free to contact me if you are interested."
+  ],
+  "courses_taken": [
+      {
+        "cname": "cpsc 210",
+        "description" : "Introduction to Java programming, Object Oriented concepts, and Android programming."
+      },
+      {
+        "cname": "cpsc 213",
+        "description" : "Introduction to software architecture, operating systems and I/O architectures. "
+      },
+      {
+        "cname": "cpsc 221",
+        "description" : "Introduction to data structures and algorithms."
+      },
+      {
+        "cname": "cpsc 310",
+        "description" : "Introduction to software engineering practices, "
+      },
+      {
+        "cname": "cpsc 304",
+        "description" : "Relational databases"
+      },
+      {
+        "cname": "cpsc 313",
+        "description" : "Computer hardware and operating systems"
+      }
+    ]
 }

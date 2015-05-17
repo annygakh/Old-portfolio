@@ -1,5 +1,5 @@
 var app = app || {};
-var projects;
+var projects, info;
 var main = function() {
   
   app.initialize_rotating_words();
@@ -14,12 +14,54 @@ var main = function() {
       // get data about our projects
       projects = data;
       // console.log(data.length);
+      get_info();
       generate_projects_html(data);
       generate_recent_project_html(data);
-      render(window.location.hash); 
+      
     });
   }
+  function get_info(){
+    $.getJSON("./info.json", function(data){
 
+        info = data;
+
+
+        //
+        generate_info(data);
+
+        render(window.location.hash); 
+    });
+  }
+  function generate_info(data){
+      var courses_taken = data["courses_taken"];
+      generate_courses_taken(courses_taken);
+  }
+  function generate_courses_taken(courses){
+    console.log('generate_courses_taken');
+    console.log(courses);
+    var $courses = $('.courses');
+    var template_script = $('#courses-taken-template').html();
+    var template = _.template(template_script);
+
+    for (var i = 0; i < courses.length; i++){
+      var course = courses[i];
+      console.log(course);
+      
+      var cname = course['cname'];
+      var desc = course['description'];
+
+      var attrs = {
+        'cname' : cname,
+        'description' : desc
+      };
+      console.log(attrs);
+      var html_templ = template(attrs);
+      $courses.append(html_templ);
+    }
+
+
+
+  }
   
   function generate_projects_html(data) {
       console.log("got json completed");
