@@ -148,6 +148,9 @@ function create_detailed_project(name, projects){
 				photos : obj.pictures
 			}
 
+			if (details["link_in_action"] != "") {
+			  attrs["link_in_action"] = details["link_in_action"];
+			}
 			var template = $('#detailed-project-template').html();
 			var templ = _.template(template);
 
@@ -175,6 +178,9 @@ function generate_recent_project_html(projects){
 	  "link" : short_summary["link"],
 	  "date" : short_summary["date"],
 	  "photos" : recent_obj.pictures
+	}
+	if (short_summary["link_in_action"] != "") {
+	  attrs["link_in_action"] = short_summary["link_in_action"];
 	}
 	page.append(template(attrs));
 	initialize_carousel(unique_id);

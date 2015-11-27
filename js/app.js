@@ -78,11 +78,13 @@ var main = function() {
         "type" : obj["type"],
         "concept" : obj_short_summary["concept"],
         "toolkit" : obj_short_summary["toolkit"],
-        "link" : obj_short_summary["link"],
+        "link" : obj_short_summary["source-code"],
         "date" : obj_short_summary["date"],
         "photos" : obj.pictures
       }
-
+      if (obj_short_summary["link_in_action"] != "") {
+        attrs["link_in_action"] = obj_short_summary["link_in_action"];
+      }
 
       list.append(template(attrs));
       initialize_carousel(obj.id);

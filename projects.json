@@ -8,7 +8,8 @@
       "toolkit": "Javascript, Google Maps, Foursquare",
       "source-code": "https://github.com/annygakh/cafeviz",
       "detailed-descripton": "",
-      "date": "April 2015"
+      "date": "April 2015",
+      "link_in_action" : "http://annygakh.me/cafeviz/"
     },
     "details": {
       "background": "After seeing multiple data visualization projects online, I wanted to give such type of projects a try. I figured it would be interesting to see which regions have high rated restaraunts and in future, incorporate other relevant datasets such as population data, and attempt to find whether there is a correlation between them.",
@@ -29,7 +30,8 @@
       "toolkit": "Javascript, Backbone.js, Underscore.js",
       "source-code": "https://github.com/annygakh/booky",
       "detailed-descripton": "",
-      "date": "March 2015"
+      "date": "March 2015",
+      "link_in_action" : "http://annygakh.me/booky/"
     },
     "details": {
       "background": "After multiple attempts to find the perfect bookmarking extension for my browser, I decided to create my own. I didn't create an extension, but I created a web application. Users can set their favourite browser to open this web application whenever a new tab is opened. In future I am planning to add more features such as letting users increase the initial amount of bookmarks they can have.",
@@ -50,7 +52,8 @@
       "toolkit": "Java, Android, Node.js, Firebase",
       "source-code": "https://github.com/annygakh/canski",
       "detailed-descripton": "",
-      "date": "February 2015"
+      "date": "February 2015",
+      "link_in_action" : "http://annygakh.me/booky/canski"
     },
     "details": {
       "background": "Ever since I started skiing I kept an eye out for how many trails were open on each mountain around Vancouver area. That quickly got tiring for me and of course I decided to automate the task.",
@@ -72,7 +75,8 @@
       "toolkit": "Javascript, HTML5 Canvas",
       "source-code": "https://github.com/annygakh/canski",
       "detailed-descripton": "",
-      "date": "February 2015"
+      "date": "February 2015",
+      "link_in_action" : "http://peterysc.github.io/hacks2015/snake.html"
     },
     "details": {
       "background": "My friends and I decided to participate in hackathon 'nwHacks'. The theme was sustainability. For a long time I wanted to learn how to create browser games and this hackathon was the perfect opportunity to do so. To get started, we watched a tutorial on how to create a basic snake game.",
@@ -96,7 +100,8 @@
       "toolkit": "Javascript, Backbone.js, Underscore.js, Parse, CSS, HTML",
       "source-code": "https://github.com/annygakh/thundr",
       "detailed-descripton": "",
-      "date": "January 2015 - April 2015"
+      "date": "January 2015 - April 2015",
+      "link_in_action" : "http://thundr.parseapp.com"
     },
     "details": {
       "background": "This application was done for one of the Computer Science courses that I took. We were required to work with a large dataset and display the data in a tabular form or in form of a map. ",
@@ -119,7 +124,8 @@
       "toolkit": "SQL",
       "source-code": "https://github.com/jonrodness/cpsc304Project",
       "detailed-descripton": "",
-      "date": "February 2015 - April 2015"
+      "date": "February 2015 - April 2015",
+      "link_in_action" : ""
     },
     "details": {
       "background": "This application was done for one of the Computer Science courses that I took. We were required to create an application that would benefit from a database. ",

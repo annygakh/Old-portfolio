@@ -106,9 +106,9 @@
 					<br>
 						I am a second year student at University of British Columbia. 
 					I am interested in app development - familiar with Android platform,
-					starting out with iOS soon. I am experienced with Java 6/7 and C.
-					I have worked with Javascript(as you can see) and Backbone.JS.
-					Currently learning NodeJS, Python and C++. 
+					starting out with iOS soon. I am experienced with Java and C.
+					I have worked with Javascript(as you can see), Backbone.JS and C++.
+					Currently learning Python, HTML5 Game development and Spring framework. 
 
 					<br>
 					<br>
@@ -129,9 +129,11 @@
 
 					<h2>Languages and others</h2>
 					<ul class="languages">
-						<li>Java, C, SQL, HTML, CSS, JUnit, GDB</li>
+						<li>Java, C, C++, Oracle SQL, HTML, CSS</li>
+						<li>JUnit, TestNG, Mockito, Selenium</li>
 						<li>Android, Backbone.js, Underscore.js</li>
-						<li>Currently Learning: Python and C++</li>
+						<li>GDB</li>
+						<li>Currently Learning: Python and Spring framework</li>
 						<!-- <li></li> -->
 					</ul>
 				</div>
@@ -154,10 +156,33 @@
 					<br>
 					<br>
 					<span class="announcement">
-					I am currently available for a co-op postion, starting September 2015.
+					I am currently available for a co-op postion or an internship for summer of 2016.
 					Feel free to <a href="#contact/">contact me</a> if you are interested.
 					</span>
 					<!-- <span> -->
+					<div class="job-position">
+						<div class="job-title">
+							<span class="position-name">
+								Junior Developer
+							</span>
+							<span class="location"> 
+								Monexa Services Inc.
+							</span>
+							<span class="date"> 
+								Sept 2015 - April 2016
+							</span>
+
+						</div>
+						<ul class="description">
+							<li>
+								stuff
+							</li>
+							<li>
+								stuff
+							</li>
+						</ul>
+					</div>
+
 					<div class="job-position">
 						<div class="job-title">
 							<span class="position-name">
@@ -181,6 +206,8 @@
 							</li>
 						</ul>
 					</div>
+					<!-- FIXME: add job information programmatically, like I do with courses -->
+
 				</div>
 			</div>
 			<div class="page hidden projects">
@@ -276,6 +303,9 @@
 
 				<p class="links"> 
 					<a href="<%=link%>">Source code</a> 
+					<% if (typeof(link_in_action) !== "undefined") { %>
+					    <a href="<%=link_in_action%>">Demo</a> 
+					<% } %>
 				</p>
 
 				<p class="date">
@@ -330,9 +360,12 @@
 						<%=toolkit%> 
 					</p>
 
-					<p class="links"> 
+					<p class="links">
 						<a href="<%=link%>">Source code</a> 
-						<a class="link" data-name="<%=name%>" href="#projects/<%=name%>">detailed description</a> 
+						<a class="link" data-name="<%=name%>" href="#projects/<%=name%>">detailed description</a>
+						<% if (typeof(link_in_action) !== "undefined") { %>
+						    <a href="<%=link_in_action%>">Demo</a> 
+						<% } %> 
 					</p>
 
 					<p class="date">
